@@ -14,12 +14,14 @@ import React from "react";
 import { ArrowDown } from "lucide-react";
 import { SearchParams } from "./page";
 
+
 interface Props {
   tickets: Ticket[];
   searchParams: SearchParams;
 }
 
-const DataTable = ({ tickets, searchParams }: Props) => {
+const DataTable = async ({ tickets, searchParams }: Props) => {
+
   return (
     <div className="w-full mt-5">
       <div className="rounded-md sm:border">

@@ -29,7 +29,7 @@ const Pagination = ({ itemCount, pageSize, currentPage }: Props) => {
   };
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 minhaclasse">
       <div>
         <Button
           variant="outline"

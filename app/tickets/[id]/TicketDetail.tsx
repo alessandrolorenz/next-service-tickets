@@ -1,4 +1,4 @@
-import { Ticket } from "@prisma/client";
+import { Ticket, User } from "@prisma/client";
 import React from "react";
 import {
   Card,
@@ -14,12 +14,19 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import ReactMarkDown from "react-markdown";
 import DeleteButton from "./DeleteButton";
+import AssignTicket from "@/components/AssignTicket";
+import { getServerSession } from "next-auth";
+
+import options from "../../api/auth/[...nextauth]/options";
 
 interface Props {
   ticket: Ticket;
+  users: User[];
+  authenticated?: boolean;
 }
 
-const TicketDetail = ({ ticket }: Props) => {
+const TicketDetail = async ({ ticket, users }: Props) => {
+    const session = await getServerSession(options);
   return (
     <div className="lg:grid lg:grid-cols-4">
       <Card className="mx-4 mb-4 lg:col-span-3 lg:mr-4">
@@ -57,6 +64,7 @@ const TicketDetail = ({ ticket }: Props) => {
         </CardFooter>
       </Card>
       <div className="mx-4 flex lg:flex-col lg:mx-0 gap-2">
+        <AssignTicket ticket={ticket} users={users} />
         <Link
           href={`/tickets/edit/${ticket.id}`}
           className={`${buttonVariants({
@@ -65,7 +73,7 @@ const TicketDetail = ({ ticket }: Props) => {
         >
           Edit Ticket
         </Link>
-        <DeleteButton ticketId={ticket.id} />
+        <DeleteButton ticketId={ticket.id} authenticated={session ? true : false} />
       </div>
     </div>
   );

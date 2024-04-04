@@ -20,13 +20,17 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { Ticket } from "@prisma/client";
 
+
 type TicketFormData = z.infer<typeof ticketSchema>;
 
 interface Props {
   ticket?: Ticket;
 }
 
-const TicketForm = ({ ticket }: Props) => {
+const TicketForm =  ({ ticket }: Props) => {
+
+
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
@@ -146,6 +150,7 @@ const TicketForm = ({ ticket }: Props) => {
           </Button>
         </form>
       </Form>
+      <p className="text-destructive">{error}</p>
     </div>
   );
 };
