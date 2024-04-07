@@ -1,12 +1,12 @@
-import dynamic from "next/dynamic";
-import React from "react";
+import dynamic from 'next/dynamic'
+import React from 'react'
 
-const TicketForm = dynamic(() => import("@/components/TicketForm"), {
-  ssr: false,
-});
+const TicketForm = dynamic(() => import('@/components/TicketForm'), {
+    ssr: false,
+})
 
 const NewTicket = () => {
-  return <TicketForm />;
-};
+    return <TicketForm />
+}
 
-export default NewTicket;
+export default NewTicket
