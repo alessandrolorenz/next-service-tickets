@@ -53,7 +53,7 @@ const AccordionBasicExample = (): JSX.Element => {
                     </h2>
                     <TECollapse
                         show={activeElement === 'element1'}
-                        className="!mt-0 !rounded-b-none !shadow-none"
+                        className="mt-0 rounded-b-none shadow-none"
                     >
                         <div className="px-5 py-4">
                             <strong>
