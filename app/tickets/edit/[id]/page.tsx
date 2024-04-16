@@ -15,8 +15,7 @@ const TicketForm = dynamic(() => import('@/components/TicketForm'), {
 })
 
 const EditTicket = async ({ params }: Props) => {
-    // const session = await getServerSession(options)
-    const session = { user: { role: 'ADMIN' } }
+    const session = await getServerSession(options)
 
     if (!session) {
         return (

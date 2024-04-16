@@ -1,58 +1,51 @@
-import React from "react";
-import prisma from "@/prisma/db";
-import DashRecentTickets from "@/components/DashRecentTickets";
-import DashChart from "@/components/DashChart";
-import Pagination from "@/components/Pagination";
+'use client'
 
-const Dashboard = async () => {
-  const tickets = await prisma.ticket.findMany({
-    where: {
-      NOT: [{ status: "CLOSED" }],
-    },
-    orderBy: {
-      updatedAt: "desc",
-    },
-    skip: 0,
-    take: 5,
-    include: {
-      assignedToUser: true,
-    },
-  });
+import React from 'react'
+import './homepage.css'
+import AccordionBasicExample from '@/components/Accordions'
 
-  const groupTicket = await prisma.ticket.groupBy({
-    by: ["status"],
-    _count: {
-      id: true,
-    },
-  });
-
-  const data = groupTicket.map((item) => {
-    return {
-      name: item.status,
-      total: item._count.id,
-    };
-  });
-
-  const data1 = groupTicket.map((item) => {
-    return {
-      itemCount: 5,
-      pageSize: 3,
-      currentPage: 1,
-    };
-  });
-
-  return (
-    <div>
-      <div className="grid gap-4 md:grid-cols-2 px-2">
+const Home = async () => {
+    return (
         <div>
-          <DashRecentTickets tickets={tickets} />
-        </div>
-        <div>
-          <DashChart data={data} />
-        </div>
-      </div>
-    </div>
-  );
-};
+            <section
+                className="section main-banner"
+                id="top"
+                data-section="section1"
+            >
+                <iframe
+                    id="bg-video"
+                    src="https://www.youtube.com/embed/5NlHDliKrmc?autoplay=1&loop=1&mute=1"
+                    title="Portfolio Alessandro Lorenz"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                ></iframe>
 
-export default Dashboard;
+                <div className="video-overlay header-text">
+                    <div className="caption">
+                        <h6>
+                            Portfolio website with Typescript, ReactJs, NextJs,
+                            Tailwind, Prisma, CI/CD
+                        </h6>
+                        <h2>
+                            <em>ALESSANDRO</em> LORENZ
+                        </h2>
+                        <div className="main-button">
+                            <div className="scroll-to-section">
+                                <a href="https://github.com/alessandrolorenz/next-service-tickets">
+                                    GITHUB REPOSITORY
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <AccordionBasicExample />
+            </section>
+        </div>
+    )
+}
+
+export default Home

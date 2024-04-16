@@ -6,8 +6,7 @@ import { getServerSession } from 'next-auth'
 import options from '@/app/api/auth/[...nextauth]/options'
 
 const MainNav = async () => {
-    // const session = await getServerSession(options);
-    const session = { user: { role: 'ADMIN' } }
+    const session = await getServerSession(options)
 
     return (
         <div className="flex justify-between">
