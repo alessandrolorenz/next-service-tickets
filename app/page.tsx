@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import React from 'react'
-import './homepage.css'
-import AccordionBasicExample from '@/components/Accordions'
+import React from "react"
+import "./homepage.css"
+import AccordionBasicExample from "@/components/Accordions"
 
 const Home = async () => {
     return (
@@ -12,14 +12,24 @@ const Home = async () => {
                 id="top"
                 data-section="section1"
             >
-                <iframe
+                <video
                     id="bg-video"
-                    src="https://www.youtube.com/embed/5NlHDliKrmc?autoplay=1&loop=1&mute=1"
-                    title="Portfolio Alessandro Lorenz"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                ></iframe>
+                    width="320"
+                    height="240"
+                    controls
+                    preload="none"
+                    autoPlay
+                    muted
+                >
+                    <source src="portfolio.mp4" type="video/mp4" />
+                    <track
+                        src="/path/to/captions.vtt"
+                        kind="subtitles"
+                        srcLang="en"
+                        label="English"
+                    />
+                    Your browser does not support the video tag.
+                </video>
 
                 <div className="video-overlay header-text">
                     <div className="caption">

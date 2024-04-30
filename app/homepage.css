@@ -28,6 +28,7 @@
       left: 0;
       bottom: 7px;
       width: 100%;
+      height: 100vh;
   }
   
   .main-banner .caption {
@@ -37,6 +38,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .main-banner .caption h6 {
