@@ -1,19 +1,19 @@
 "use client"
 
 import React from "react"
-import "./homepage.css"
+import styles from "./homepage.module.css"
 import AccordionBasicExample from "@/components/Accordions"
 
 const Home = async () => {
     return (
         <div>
             <section
-                className="section main-banner"
-                id="top"
+                className={`${styles.section} ${styles["main-banner"]}`}
+                id={styles.top}
                 data-section="section1"
             >
                 <video
-                    id="bg-video"
+                    id={`${styles["bg-video"]}`}
                     width="320"
                     height="240"
                     controls
@@ -31,17 +31,18 @@ const Home = async () => {
                     Your browser does not support the video tag.
                 </video>
 
-                <div className="video-overlay header-text">
-                    <div className="caption">
+                <div
+                    className={`${styles["video-overlay"]} ${styles["header-text"]}`}
+                >
+                    <div className={styles.caption}>
                         <h6>
-                            Portfolio website with Typescript, ReactJs, NextJs,
-                            Tailwind, Prisma, CI/CD
+                            Video Editing and Motion Graphics Portfolio Website
                         </h6>
                         <h2>
                             <em>ALESSANDRO</em> LORENZ
                         </h2>
-                        <div className="main-button">
-                            <div className="scroll-to-section">
+                        <div className={`${styles["main-button"]} `}>
+                            <div className={`${styles["scroll-to-section"]} `}>
                                 <a href="https://github.com/alessandrolorenz/next-service-tickets">
                                     GITHUB REPOSITORY
                                 </a>
