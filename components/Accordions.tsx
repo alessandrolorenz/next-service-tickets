@@ -26,7 +26,7 @@ const AccordionBasicExample = (): JSX.Element => {
                             aria-expanded="true"
                             aria-controls="collapseOne"
                         >
-                            Accordion Item #1
+                            Project description
                             <span
                                 className={`${
                                     activeElement === "element1"
@@ -57,17 +57,26 @@ const AccordionBasicExample = (): JSX.Element => {
                     >
                         <div className="px-5 py-4">
                             <strong>
-                                This is the first items accordion body.
+                                This project was developed using a stack
+                                comprising Typescript, ReactJs, NextJs, CSS
+                                modules, Tailwind, Prisma, and CI/CD with
+                                Vercel.
                             </strong>
+                            <br />
                             {``}
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Vestibulum eu rhoncus purus, vitae tincidunt
-                            nibh. Vivamus elementum egestas ligula in varius.
-                            Proin ac erat pretium, ultricies leo at, cursus
-                            ante. Pellentesque at odio euismod, mattis urna ac,
-                            accumsan metus. Nam nisi leo, malesuada vitae
-                            pretium et, laoreet at lorem. Curabitur non
-                            sollicitudin neque.
+                            The homepage, designed with CSS modules, employs a
+                            best practice to isolate styles effectively. It
+                            showcases my portfolio of motion graphics created
+                            using Adobe AfterEffects, Illustrator, PhotoShop,
+                            and Premiere.
+                            <br />
+                            Within the logged-in section, there is a simple
+                            system I developed while undertaking a Next.js
+                            course. This system serves as a Ticket Services
+                            platform, enabling the creation of tickets or tasks
+                            related to ongoing project activities. It serves as
+                            my comprehensive to-do list, guiding the evolution
+                            of the system.
                         </div>
                     </TECollapse>
                 </div>
