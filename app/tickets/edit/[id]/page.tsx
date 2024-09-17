@@ -3,6 +3,7 @@ import React from 'react'
 import { getServerSession } from 'next-auth'
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button'
+import prisma from '@/prisma/db'
 
 import options from '../../../api/auth/[...nextauth]/options'
 
