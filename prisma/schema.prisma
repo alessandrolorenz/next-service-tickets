@@ -9,6 +9,10 @@ datasource db {
   provider     = "mysql"
   url          = env("DATABASE_URL")
   relationMode = "prisma"
+  pool     = {
+    max_open_conns = 10
+    max_idle_conns = 5
+  }
 }
 
 model Ticket {

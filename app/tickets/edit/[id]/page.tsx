@@ -21,8 +21,7 @@ const EditTicket = async ({ params }: Props) => {
     if (!session) {
         return (
             <>
-                <p className=" text-destructive">User not Authenticated!</p>
-
+                <p className="text-destructive">User not Authenticated!</p>
                 <Link
                     href={`/tickets/${params.id}`}
                     className={`${buttonVariants({
@@ -34,15 +33,47 @@ const EditTicket = async ({ params }: Props) => {
             </>
         )
     }
-    const ticket = await prisma?.ticket.findUnique({
-        where: { id: parseInt(params.id) },
-    })
 
-    if (!ticket) {
-        return <p className=" text-destructive">Ticket not found!</p>
+    try {
+        const ticket = await prisma.ticket.findUnique({
+            where: { id: parseInt(params.id) },
+        })
+
+        if (!ticket) {
+            return (
+                <>
+                    <p className="text-destructive">Ticket not found!</p>
+                    <Link
+                        href={`/tickets/${params.id}`}
+                        className={`${buttonVariants({
+                            variant: 'default',
+                        })}`}
+                    >
+                        Back
+                    </Link>
+                </>
+            )
+        }
+
+        return <TicketForm ticket={ticket} />
+    } catch (error) {
+        console.error('Error fetching ticket:', error)
+        return (
+            <>
+                <p className="text-destructive">Error fetching ticket!</p>
+                <Link
+                    href={`/tickets/${params.id}`}
+                    className={`${buttonVariants({
+                        variant: 'default',
+                    })}`}
+                >
+                    Back
+                </Link>
+            </>
+        )
+    } finally {
+        await prisma.$disconnect()
     }
-
-    return <TicketForm ticket={ticket} />
 }
 
 export default EditTicket
