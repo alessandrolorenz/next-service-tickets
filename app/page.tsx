@@ -39,6 +39,7 @@ const Home = () => {
 
                 <div
                     className={`${styles["video-overlay"]} ${styles["header-text"]}`}
+                    id={`${styles["video-overlay"]}`}
                 >
                     <div className={styles.caption}>
                         <h6>
@@ -91,94 +92,88 @@ const Home = () => {
                         activeElement={null}
                         handleClick={function (id: string): void {}}
                     >
-                        <div className="prose dark:prose-invert w-full max-w-full flex ">
-                            <Card className="w-2/4">
-                                <CardHeader>
-                                    <div className="flex justify-between mb-3">
-                                        {/* <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" /> */}
-                                    </div>
-                                    <CardTitle>
-                                        Contação de História Programa Infantil Mundo da Leitura
+                        <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-auto ">
+                            <Card className="cards-portfolio m-auto">
+                                <CardHeader className="cards-portfolio-header">
+                                    {/* <div className="flex justify-between mb-3">
+                                        <TicketStatusBadge status="OPEN" />
+                                    <TicketPriority priority="HIGH" />
+                                    </div> */}
+                                    <CardTitle className="portfolio-card-title text-lg">
+                                        Contação de História
                                     </CardTitle>
-                                    <CardDescription>
-                                        História do Homem do Cairo (creditos ao autor)
+                                    <CardDescription className="portfolio-card-description text-sm">
+                                        História do Homem do Cairo 
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="prose dark:prose-invert flex justify-between">
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center">
                                     <iframe
-                                        className="w-full"
+                                        className="iframe-video"
                                         src="https://www.youtube.com/embed/ZoNVUIQghdc"
                                         title="HISTORIA HOMEM DO CAIRO 01"
                                         frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerPolicy="strict-origin-when-cross-origin"
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter>Updated: </CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">Programa Infantil Mundo da Leitura </CardFooter>
                             </Card>
-                            <Card className="w-2/4">
-                                <CardHeader>
-                                    <div className="flex justify-between mb-3">
-                                        {/* <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" /> */}
-                                    </div>
-                                    <CardTitle>
+                            <Card className="cards-portfolio m-auto">
+                                <CardHeader className="cards-portfolio-header">
+                                    {/* <div className="flex justify-between mb-3">
+                                        <TicketStatusBadge status="OPEN" />
+                                    <TicketPriority priority="HIGH" />
+                                    </div> */}
+                                    <CardTitle className="portfolio-card-title text-lg">
                                         Videos Adobe AfterEffects
                                     </CardTitle>
-                                    <CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm">
                                         Videos criados
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="prose dark:prose-invert flex justify-between w-full max-w-full">
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
-                                        className="w-full"
+                                        className="iframe-video"
                                         src="https://www.youtube.com/embed/f-JBNirfbNQ"
                                         title="Chamada Facebook"
                                         frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerPolicy="strict-origin-when-cross-origin"
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter>Updated: </CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">Updated: </CardFooter>
                             </Card>
-                            <Card className="w-2/4">
-                                <CardHeader>
-                                    <div className="flex justify-between mb-3">
-                                        {/* <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" /> */}
-                                    </div>
-                                    <CardTitle>
+                            <Card className="cards-portfolio m-auto">
+                                <CardHeader className="cards-portfolio-header">
+                                    {/* <div className="flex justify-between mb-3">
+                                        <TicketStatusBadge status="OPEN" />
+                                    <TicketPriority priority="HIGH" />
+                                    </div> */}
+                                    <CardTitle className="portfolio-card-title text-lg">
                                         Videos Adobe AfterEffects
                                     </CardTitle>
-                                    <CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm">
                                         Videos criados
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="prose dark:prose-invert flex justify-between w-full max-w-full">
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
-                                        className="w-full"
+                                        className="iframe-video"
                                         src="https://www.youtube.com/embed/kNSwVQU8hd8"
                                         title="Institucional Alyaprime - Alyaprev"
                                         frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerPolicy="strict-origin-when-cross-origin"
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter>Updated: </CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">Updated: </CardFooter>
                             </Card>
                         </div>
                     </AccordionItem>
-                    <AccordionItem
-                        id="3"
-                        title="More info"
-                        content="This is the content of more info."
-                        activeElement={null}
-                        handleClick={function (id: string): void {}}
-                    />
+          
                 </AccordionBasicExample>
             </section>
         </div>
