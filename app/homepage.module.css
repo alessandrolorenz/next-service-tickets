@@ -68,9 +68,16 @@
     color: #f5a425;
     font-weight: 900;
   }
+  .prose.flex.justify-between.w-full.max-w-full {
+    flex-direction: column;
+    background-color: red;
+  }
   
   @media (min-width: 600) {
     .main-banner .caption h2 {
       font-size: 64px;
+    }
+    .prose.flex.justify-between.w-full.max-w-full {
+      flex-direction: row;
     }
   }
