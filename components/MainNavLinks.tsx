@@ -3,7 +3,13 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
 
-const MainNavLinks = ({ role }: { role?: string }) => {
+interface MainNavLinksProps {
+    role?: string;
+    onTicketsAppClick: () => void;
+    onHomeClick: () => void;
+}
+
+const MainNavLinks = ({ role, onTicketsAppClick, onHomeClick }: MainNavLinksProps) => {
     const [showAdditionalLinks, setShowAdditionalLinks] = useState(false);
 
     const links = [
@@ -19,8 +25,10 @@ const MainNavLinks = ({ role }: { role?: string }) => {
     const handleLinkClick = (label: string) => {
         if (label === 'Tickets App') {
             setShowAdditionalLinks(true);
+            onTicketsAppClick();
         } else if (label === 'Home') {
             setShowAdditionalLinks(false);
+            onHomeClick();
         }
     };
 
