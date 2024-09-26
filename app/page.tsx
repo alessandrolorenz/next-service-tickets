@@ -3,8 +3,14 @@
 import React from "react"
 import styles from "./homepage.module.css"
 import AccordionBasicExample from "@/components/Accordions"
+import AccordionItem from "@/components/AccordionItem"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import TicketStatusBadge from "@/components/TicketStatusBadge"
+import TicketPriority from "@/components/TicketPriority"
+import ReactMarkDown from 'react-markdown'
 
-const Home = async () => {
+
+const Home = () => {
     return (
         <div>
             <section
@@ -53,7 +59,190 @@ const Home = async () => {
             </section>
 
             <section>
-                <AccordionBasicExample />
+                <AccordionBasicExample>
+                    <AccordionItem
+                        id="1"
+                        title="Project description"
+                        activeElement={null}
+                        handleClick={function (id: string): void {}}
+                        isFirstChild={true}
+                        isLastChild={false}
+                    >
+                               <Card className="mx-4 mb-4 lg:col-span-3 lg:mr-4">
+                <CardHeader>
+                    <CardTitle>This project was developed using a stack comprising Typescript, ReactJs, NextJs, CSS modules, Tailwind, Prisma, and CI/CD with Vercel.</CardTitle>
+                    <CardDescription>
+                        The homepage, designed with CSS modules, employs a best practice to isolate styles effectively. It showcases my portfolio of motion graphics created using Adobe AfterEffects, Illustrator, PhotoShop, and Premiere.
+                    </CardDescription>
+                </CardHeader>
+                <CardContent className="prose dark:prose-invert">
+                    This system serves as a Ticket Services platform, enabling the creation of tickets or tasks related to ongoing project activities. It serves as my comprehensive to-do list, guiding the evolution of the system.
+                </CardContent>
+                <CardFooter>
+                    Within the logged-in section, there is a simple system I developed while undertaking a Next.js course. 
+                          
+                </CardFooter>
+            </Card>
+                    </AccordionItem>
+                    <AccordionItem
+                        id="2"
+                        title="Another section"
+                        activeElement={null}
+                        handleClick={function (id: string): void {}}
+                        isFirstChild={false}
+                        isLastChild={true}
+                    >
+                        <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-auto ">
+                            <Card className="cards-portfolio m-auto">
+                                <CardHeader className="cards-portfolio-header">
+                                    {/* <div className="flex justify-between mb-3">
+                                        <TicketStatusBadge status="OPEN" />
+                                    <TicketPriority priority="HIGH" />
+                                    </div> */}
+                                    <CardTitle className="portfolio-card-title text-lg">
+                                        Programa Mundo da Leirura na TV
+                                    </CardTitle>
+                                    <CardDescription className="portfolio-card-description text-sm">
+                                        Covil dos Mandriões / UPFTV-Canal Futura
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center">
+                                    <iframe
+                                        className="iframe-video"
+                                        src="https://www.youtube.com/embed/zu4f-hAqvVg"
+                                        title="Mundo da Leirura - Covil dos Mandriões"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
+                                        allowFullScreen
+                                    ></iframe>
+                                </CardContent>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    Programa Infantil Mundo da Leitura na TV
+                                    produzido pela UPFTV e Canal Futura. Projeto
+                                    que tive a honra de fazer parte por 10 anos.
+                                </CardFooter>
+                            </Card>
+
+                            <Card className="cards-portfolio m-auto">
+                                <CardHeader className="cards-portfolio-header">
+                                    {/* <div className="flex justify-between mb-3">
+                                        <TicketStatusBadge status="OPEN" />
+                                    <TicketPriority priority="HIGH" />
+                                    </div> */}
+                                    <CardTitle className="portfolio-card-title text-lg">
+                                        Contação de História
+                                    </CardTitle>
+                                    <CardDescription className="portfolio-card-description text-sm">
+                                        História do Homem do Cairo
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center">
+                                    <iframe
+                                        className="iframe-video"
+                                        src="https://www.youtube.com/embed/ZoNVUIQghdc"
+                                        title="HISTORIA HOMEM DO CAIRO 01"
+                                        frameBorder="0"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
+                                        allowFullScreen
+                                    ></iframe>
+                                </CardContent>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    Programa Infantil Mundo da Leitura na TV
+                                    produzido pela UPFTV e Canal Futura. Projeto
+                                    que tive a honra de fazer parte por 10 anos.
+                                </CardFooter>
+                            </Card>
+                            <Card className="cards-portfolio m-auto">
+                                <CardHeader className="cards-portfolio-header">
+                                    {/* <div className="flex justify-between mb-3">
+                                        <TicketStatusBadge status="OPEN" />
+                                    <TicketPriority priority="HIGH" />
+                                    </div> */}
+                                    <CardTitle className="portfolio-card-title text-lg">
+                                    Programa Mundo da Leituta na TV
+                                    </CardTitle>
+                                    <CardDescription className="portfolio-card-description text-sm">
+                                    Quadro Oficina: Fantoche - UPFTV / Canal Futura
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center">
+                                    <iframe
+                                        className="iframe-video"
+                                        src="https://www.youtube.com/embed/LTZ2ZztZ2oU"
+                                        title="OFICINA 285 FANTOCHE"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
+                                        allowFullScreen
+                                    ></iframe>
+                                </CardContent>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    Programa Infantil Mundo da Leitura na TV
+                                    produzido pela UPFTV e Canal Futura. Projeto
+                                    que tive a honra de fazer parte por 10 anos.
+                                </CardFooter>
+                            </Card>
+
+                            <Card className="cards-portfolio m-auto">
+                                <CardHeader className="cards-portfolio-header">
+                                    {/* <div className="flex justify-between mb-3">
+                                        <TicketStatusBadge status="OPEN" />
+                                    <TicketPriority priority="HIGH" />
+                                    </div> */}
+                                    <CardTitle className="portfolio-card-title text-lg">
+                                        Videos Adobe AfterEffects
+                                    </CardTitle>
+                                    <CardDescription className="portfolio-card-description text-sm">
+                                        Videos criados
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
+                                    <iframe
+                                        className="iframe-video"
+                                        src="https://www.youtube.com/embed/f-JBNirfbNQ"
+                                        title="Chamada Facebook"
+                                        frameBorder="0"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
+                                        allowFullScreen
+                                    ></iframe>
+                                </CardContent>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    Updated:{" "}
+                                </CardFooter>
+                            </Card>
+
+                            <Card className="cards-portfolio m-auto">
+                                <CardHeader className="cards-portfolio-header">
+                                    {/* <div className="flex justify-between mb-3">
+                                        <TicketStatusBadge status="OPEN" />
+                                    <TicketPriority priority="HIGH" />
+                                    </div> */}
+                                    <CardTitle className="portfolio-card-title text-lg">
+                                        Videos Adobe AfterEffects
+                                    </CardTitle>
+                                    <CardDescription className="portfolio-card-description text-sm">
+                                        Videos criados
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
+                                    <iframe
+                                        className="iframe-video"
+                                        src="https://www.youtube.com/embed/kNSwVQU8hd8"
+                                        title="Institucional Alyaprime - Alyaprev"
+                                        frameBorder="0"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
+                                        allowFullScreen
+                                    ></iframe>
+                                </CardContent>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    Updated:{" "}
+                                </CardFooter>
+                            </Card>
+                        </div>
+                    </AccordionItem>
+                </AccordionBasicExample>
             </section>
         </div>
     )
