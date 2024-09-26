@@ -39,7 +39,6 @@ const Home = () => {
 
                 <div
                     className={`${styles["video-overlay"]} ${styles["header-text"]}`}
-                    id={`${styles["video-overlay"]}`}
                 >
                     <div className={styles.caption}>
                         <h6>
