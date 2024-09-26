@@ -68,24 +68,21 @@ const Home = () => {
                         isFirstChild={true}
                         isLastChild={false}
                     >
-                        <strong>
-                            This project was developed using a stack comprising
-                            Typescript, ReactJs, NextJs, CSS modules, Tailwind,
-                            Prisma, and CI/CD with Vercel.
-                        </strong>
-                        <br />
-                        {``}
-                        The homepage, designed with CSS modules, employs a best
-                        practice to isolate styles effectively. It showcases my
-                        portfolio of motion graphics created using Adobe
-                        AfterEffects, Illustrator, PhotoShop, and Premiere.
-                        <br />
-                        Within the logged-in section, there is a simple system I
-                        developed while undertaking a Next.js course. This
-                        system serves as a Ticket Services platform, enabling
-                        the creation of tickets or tasks related to ongoing
-                        project activities. It serves as my comprehensive to-do
-                        list, guiding the evolution of the system.
+                               <Card className="mx-4 mb-4 lg:col-span-3 lg:mr-4">
+                <CardHeader>
+                    <CardTitle>This project was developed using a stack comprising Typescript, ReactJs, NextJs, CSS modules, Tailwind, Prisma, and CI/CD with Vercel.</CardTitle>
+                    <CardDescription>
+                        The homepage, designed with CSS modules, employs a best practice to isolate styles effectively. It showcases my portfolio of motion graphics created using Adobe AfterEffects, Illustrator, PhotoShop, and Premiere.
+                    </CardDescription>
+                </CardHeader>
+                <CardContent className="prose dark:prose-invert">
+                    This system serves as a Ticket Services platform, enabling the creation of tickets or tasks related to ongoing project activities. It serves as my comprehensive to-do list, guiding the evolution of the system.
+                </CardContent>
+                <CardFooter>
+                    Within the logged-in section, there is a simple system I developed while undertaking a Next.js course. 
+                          
+                </CardFooter>
+            </Card>
                     </AccordionItem>
                     <AccordionItem
                         id="2"
