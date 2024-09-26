@@ -27,13 +27,13 @@
   }
 
   .cards-portfolio {
-    width: calc((295 / 360)* 100vw);
+    width: calc((320 / 360)* 100vw);
     height: calc((350 / 360)* 100vw);
   }
 
   .iframe-video {
-    width: calc((250 / 360)* 100vw);
-    height: calc((138 / 360)* 100vw);
+    width: calc((270 / 360)* 100vw);
+    height: calc((150 / 360)* 100vw);
   }
 
   .p-6.cards-portfolio-header {
@@ -108,7 +108,7 @@
 
   @media (min-width: 1024px) {
     .cards-portfolio {
-      width: calc((450 / 1440) * 100vw);
+      width: calc((440 / 1440)* 100vw);
       height: calc((440 / 1440)* 100vw)
     }
 
@@ -144,8 +144,8 @@
     }
 
     .text-sm.portfolio-card-footer {
-      font-size: calc((11 / 1440) * 100vw);
-      line-height: calc((11 / 1440) * 100vw);
+      font-size: calc((14 / 1440) * 100vw);
+      line-height: calc((18 / 1440) * 100vw);
       padding: calc((24 / 1440) * 100vw);
       padding-top: 0;
     }

@@ -5,14 +5,16 @@ interface AccordionBasicExampleProps {
 }
 
 const AccordionBasicExample = ({ children }: AccordionBasicExampleProps): JSX.Element => {
-    const [activeElement, setActiveElement] = useState<string | null>(null);
+    const [activeElement, setActiveElement] = useState<string[]>([]);
 
     const handleClick = (id: string) => {
-        if (id === activeElement) {
-            setActiveElement(null);
-        } else {
-            setActiveElement(id);
-        }
+        setActiveElement((prevActiveElements) => {
+            if (prevActiveElements.includes(id)) {
+                return prevActiveElements.filter((elementId) => elementId !== id);
+            } else {
+                return [...prevActiveElements, id];
+            }
+        });
     };
 
     return (
