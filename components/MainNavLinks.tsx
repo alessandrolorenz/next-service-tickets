@@ -14,7 +14,7 @@ const MainNavLinks = ({ role, onTicketsAppClick, onHomeClick }: MainNavLinksProp
 
     const links = [
         { label: 'Home', href: '/', adminOnly: false },
-        { label: 'Tickets App', href: '', adminOnly: false },
+        { label: 'Tickets App', href: '/ticket-app', adminOnly: false },
         { label: 'Dashboard', href: '/dashboard', adminOnly: false },
         { label: 'Tickets', href: '/tickets', adminOnly: false },
         { label: 'Users', href: '/users', adminOnly: true },

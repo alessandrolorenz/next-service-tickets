@@ -23,13 +23,13 @@ export default async function RootLayout({
 
     return (
         <html lang="en">
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
             <body className={inter.className}>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="dark"
-                    enableSystem
-                    disableTransitionOnChange
-                >
                     <nav className="flex flex-col items-center border-b px-5 py-3">
                         <div className="max-w-6xl w-full">
                             <MainNav session={session} />
@@ -38,8 +38,8 @@ export default async function RootLayout({
                     <main className="flex flex-col items-center">
                         <div className=" w-full">{children}</div>
                     </main>
-                </ThemeProvider>
             </body>
+        </ThemeProvider>
         </html>
     )
 }
