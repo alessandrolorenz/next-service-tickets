@@ -1,45 +1,12 @@
+'use client'
 import React from 'react'
-import prisma from '@/prisma/db'
-import DashRecentTickets from '@/components/DashRecentTickets'
-import DashChart from '@/components/DashChart'
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Calendar } from '@/components/ui/calendar'
 
-const PresentationApp = async () => {
-    const tickets = await prisma.ticket.findMany({
-        where: {
-            NOT: [{ status: 'CLOSED' }],
-        },
-        orderBy: {
-            updatedAt: 'desc',
-        },
-        skip: 0,
-        take: 5,
-        include: {
-            assignedToUser: true,
-        },
-    })
-
-    const groupTicket = await prisma.ticket.groupBy({
-        by: ['status'],
-        _count: {
-            id: true,
-        },
-    })
-
-    const data = groupTicket.map((item) => {
-        return {
-            name: item.status,
-            total: item._count.id,
-        }
-    })
-
-    const data1 = groupTicket.map((item) => {
-        return {
-            itemCount: 5,
-            pageSize: 3,
-            currentPage: 1,
-        }
-    })
+const PresentationApp 
+= () => {
+    const [date, setDate] = React.useState<Date | undefined>(new Date())
 
     return (
         <div>
@@ -78,7 +45,11 @@ const PresentationApp = async () => {
                         </Card>
                 </div>
                 <div>
-                    <DashChart data={data} />
+                <Calendar
+                    selected={date}
+                    onSelect={setDate}
+                    className="rounded-md border"
+                />
                 </div>
             </div>
         </div>

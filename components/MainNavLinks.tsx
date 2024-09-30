@@ -23,10 +23,10 @@ const MainNavLinks = ({ role, onTicketsAppClick, onHomeClick }: MainNavLinksProp
     const currentPath = usePathname();
 
     const handleLinkClick = (label: string) => {
-        if (label === 'Tickets App') {
+        if (label !== '/') {
             setShowAdditionalLinks(true);
             onTicketsAppClick();
-        } else if (label === 'Home') {
+        } else {
             setShowAdditionalLinks(false);
             onHomeClick();
         }
@@ -49,7 +49,7 @@ const MainNavLinks = ({ role, onTicketsAppClick, onHomeClick }: MainNavLinksProp
                             'cursor-default text-primary/70 hover:text-primary/60'
                         }`}
                         key={link.label}
-                        onClick={() => handleLinkClick(link.label)}
+                        onClick={() => handleLinkClick(link.href)}
                     >
                         {link.label}
                     </Link>

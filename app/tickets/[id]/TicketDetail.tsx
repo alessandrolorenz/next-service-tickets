@@ -28,6 +28,7 @@ interface Props {
 
 const TicketDetail = async ({ ticket, users }: Props) => {
     const session = await getServerSession(options)
+
     return (
         <div className="lg:grid lg:grid-cols-4">
             <Card className="mx-4 mb-4 lg:col-span-3 lg:mr-4">
@@ -65,7 +66,9 @@ const TicketDetail = async ({ ticket, users }: Props) => {
                 </CardFooter>
             </Card>
             <div className="mx-4 flex lg:flex-col lg:mx-0 gap-2">
-                <AssignTicket ticket={ticket} users={users} />
+
+
+            {session && session.user?.role === 'ADMIN'  ? <AssignTicket ticket={ticket} users={users} /> : ''}
 
                 {session ? (
                     <Link
@@ -79,13 +82,13 @@ const TicketDetail = async ({ ticket, users }: Props) => {
                 ) : (
                     <EditDialog
                         ticketId={ticket.id}
-                        authenticated={session ? true : false}
+                        authenticated={false}
                     />
                 )}
 
                 <DeleteButton
                     ticketId={ticket.id}
-                    authenticated={session ? true : false}
+                    authenticated={session && session.user?.role === 'ADMIN' ? true : false}
                 />
             </div>
         </div>

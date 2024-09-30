@@ -118,8 +118,7 @@ const Home = () => {
                             <CardFooter>
                                 Within the logged-in section, there is a simple
                                 system I developed while undertaking a Next.js
-                                course. You can login as a guest user to view:
-                                name = visitor, password = 123456.
+                                course. You can login as a guest user to view.
                             </CardFooter>
                         </Card>
                     </AccordionItem>
