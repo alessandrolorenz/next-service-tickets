@@ -17,7 +17,9 @@ const MainNav =  ({ session }: { session: any }) => {
     const handleHomeClick = () => {
         setShowAuthLinks(false);
     };
-
+const getUserInitial = (name: string) => {
+    return name.charAt(0).toUpperCase();
+};
     return (
         <div className="flex justify-between">
             <MainNavLinks role={session?.user.role} 
@@ -29,7 +31,12 @@ const MainNav =  ({ session }: { session: any }) => {
             {showAuthLinks && (
                     <>
                         {session ? (
+                            <>
+                            <span className="flex items-center justify-center w-8 h-8 bg-gray-500 text-white rounded-full">
+                                    {getUserInitial(session.user.name)}
+                            </span>
                             <Link href="/api/auth/signout?callbackUrl=/">Logout</Link>
+                            </>
                         ) : (
                             <Link href="/api/auth/signin">Login</Link>
                         )}
