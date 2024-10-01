@@ -19,6 +19,7 @@ import { Button } from './ui/button'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { Ticket } from '@prisma/client'
+import { Calendar } from './ui/calendar'
 
 type TicketFormData = z.infer<typeof ticketSchema>
 
@@ -28,6 +29,13 @@ interface Props {
 
 const TicketForm = ({ ticket }: Props) => {
     const [isSubmitting, setIsSubmitting] = useState(false)
+    const [date, setDate] = React.useState<Date | undefined>(new Date())
+
+    const handleDateClick = (selectedDate: Date) => {
+        console.log('Date clicked:', selectedDate)
+        setDate(selectedDate)
+    }
+
     const [error, setError] = useState('')
     const router = useRouter()
 
@@ -158,7 +166,16 @@ const TicketForm = ({ ticket }: Props) => {
                                 </FormItem>
                             )}
                         />
+                    <Calendar
+                        mode="single"
+                        selected={date}
+                        onSelect={setDate}
+                        className="rounded-md border"
+                        onDayClick={handleDateClick}
+                    />
                     </div>
+
+                
                     <Button type="submit" disabled={isSubmitting}>
                         {ticket ? 'Update Ticket' : 'Create Ticket'}
                     </Button>

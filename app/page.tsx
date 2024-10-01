@@ -75,27 +75,34 @@ const Home = () => {
                             <CardHeader>
                                 <CardTitle>Welcome </CardTitle>
                                 <CardDescription>
-                                    Before transitioning into a developer role,
-                                    I gained valuable experience working as a
-                                    motion graphics and video editor on an
-                                    educational TV program. This background in
-                                    motion graphics and video editing has
-                                    enhanced my understanding of visual elements
-                                    and user experience in my current role as a
-                                    Front End Developer.
-                                    <br></br>I have professional hands-on
-                                    experience in Front End Development,
-                                    utilizing technologies such as HTML/CSS,
-                                    JavaScript, React, Vue, SCSS, Webpack, Node,
-                                    and MongoDB. I started my career as a Back
-                                    End Developer but shifted to the Front End
-                                    due to my motion graphics background.
-                                    <br></br>I enjoy being at the forefront of
-                                    innovation and I am fascinated by new
-                                    technologies and the endless possibilities
-                                    they offer to make the world a better place.
+                                    <b> Alessandro Cunha Lorenz</b> - Front End
+                                    Developer
                                 </CardDescription>
                             </CardHeader>
+                            <CardContent className="max-w-full prose dark:prose-invert">
+                            I am a Front End Developer with a background in
+                                motion graphics and video editing. Before
+                                transitioning into a developer role, I gained
+                                valuable experience working as a motion graphics
+                                and video editor on an educational TV program.
+                                This background in motion graphics and video
+                                editing has enhanced my understanding of visual
+                                elements and user experience in my current role
+                                as a Front End Developer.
+                            </CardContent>
+                            <CardContent className="max-w-full prose dark:prose-invert">
+                                               I have professional hands-on experience
+                                in Front End Development, utilizing technologies
+                                such as HTML/CSS, JavaScript, React, NextJs,
+                                Vue, SCSS, Webpack, Node, and MongoDB. I started
+                                my developer career as a Back End Developer but
+                                shifted to the Front End due to my motion
+                                graphics background.
+                                <br></br>I enjoy being at the forefront of
+                                innovation and I am fascinated by new
+                                technologies and the endless possibilities they
+                                offer to make the world a better place.
+                            </CardContent>
                             <CardContent className="max-w-full prose dark:prose-invert">
                                 This project was developed using a stack
                                 comprising Typescript, ReactJs, NextJs, CSS
@@ -105,20 +112,19 @@ const Home = () => {
                                 effectively and Iused some
                                 https://ui.shadcn.com/ components to speed up
                                 the development process. It showcases my
-                                portfolio of motion graphics created using Adobe
+                                portfolio of videos created using Adobe
                                 AfterEffects, Illustrator, PhotoShop, and
                                 Premiere.
-                                <br></br>
-                                This system serves as a Ticket Services
-                                platform, enabling the creation of tickets or
-                                tasks related to ongoing project activities. It
-                                serves as my comprehensive to-do list, guiding
-                                the evolution of the system.
                             </CardContent>
                             <CardFooter>
-                                Within the logged-in section, there is a simple
-                                system I developed while undertaking a Next.js
-                                course. You can login as a guest user to view.
+                                Also included is a system I developed while
+                                undertaking a Next.js course. This system serves
+                                as a Ticket Services platform, enabling the
+                                creation of tickets or tasks related to ongoing
+                                project activities. A user can create, edit,
+                                delete, and mark as completed a ticket. It
+                                serves as my comprehensive to-do list, guiding
+                                the evolution of the system.
                             </CardFooter>
                         </Card>
                     </AccordionItem>

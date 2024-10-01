@@ -1,3 +1,4 @@
+'use client'
 import { Ticket, User } from '@prisma/client'
 import React from 'react'
 import {
@@ -15,19 +16,25 @@ import { buttonVariants } from '@/components/ui/button'
 import ReactMarkDown from 'react-markdown'
 import DeleteButton from './DeleteButton'
 import AssignTicket from '@/components/AssignTicket'
-import { getServerSession } from 'next-auth'
 
-import options from '../../api/auth/[...nextauth]/options'
 import EditDialog from './EditDialog'
+import { Calendar } from '@/components/ui/calendar'
 
 interface Props {
     ticket: Ticket
     users: User[]
     authenticated?: boolean
+    session: any
 }
 
-const TicketDetail = async ({ ticket, users }: Props) => {
-    const session = await getServerSession(options)
+const TicketDetail = ({ ticket, users, session }: Props) => {
+
+    const [date, setDate] = React.useState<Date | undefined>(new Date())
+
+    const handleDateClick = (selectedDate: Date) => {
+        console.log('Date clicked:', selectedDate)
+        setDate(selectedDate)
+    }
 
     return (
         <div className="lg:grid lg:grid-cols-4">
@@ -91,6 +98,14 @@ const TicketDetail = async ({ ticket, users }: Props) => {
                     authenticated={session && session.user?.role === 'ADMIN' ? true : false}
                 />
             </div>
+                   <Calendar
+                    mode="single"
+                    selected={ticket.createdAt}
+                    onSelect={setDate}
+                    className="rounded-md border"
+                    onDayClick={handleDateClick}
+                />
+                
         </div>
     )
 }
