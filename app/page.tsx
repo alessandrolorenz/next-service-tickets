@@ -12,6 +12,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import CarouselTransition from "@/components/MyComponent"
 
 const Home = () => {
     return (
@@ -62,16 +63,16 @@ const Home = () => {
             </section>
 
             <section>
-                <AccordionBasicExample>
+                <AccordionBasicExample defaultOpenId="1">
                     <AccordionItem
                         id="1"
                         title="Project description"
-                        activeElement={null}
+                        activeElement={"true"}
                         handleClick={function (id: string): void {}}
                         isFirstChild={true}
                         isLastChild={false}
                     >
-                        <Card className="mx-0 mb-4 lg:col-span-3 lg:mr-0">
+                        <Card className="mx-0 mb-4 lg:col-span-3 lg:mr-0 relative">
                             <CardHeader>
                                 <CardTitle>Welcome </CardTitle>
                                 <CardDescription>
@@ -80,7 +81,7 @@ const Home = () => {
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="max-w-full prose dark:prose-invert">
-                            I am a Front End Developer with a background in
+                                I am a Front End Developer with a background in
                                 motion graphics and video editing. Before
                                 transitioning into a developer role, I gained
                                 valuable experience working as a motion graphics
@@ -91,11 +92,11 @@ const Home = () => {
                                 as a Front End Developer.
                             </CardContent>
                             <CardContent className="max-w-full prose dark:prose-invert">
-                                               I have professional hands-on experience
-                                in Front End Development, utilizing technologies
-                                such as HTML/CSS, JavaScript, React, NextJs,
-                                Vue, SCSS, Webpack, Node, and MongoDB. I started
-                                my developer career as a Back End Developer but
+                                I have professional hands-on experience in Front
+                                End Development, utilizing technologies such as
+                                HTML/CSS, JavaScript, React, NextJs, Vue, SCSS,
+                                Webpack, Node, and MongoDB. I started my
+                                developer career as a Back End Developer but
                                 shifted to the Front End due to my motion
                                 graphics background.
                                 <br></br>I enjoy being at the forefront of
@@ -126,8 +127,21 @@ const Home = () => {
                                 serves as my comprehensive to-do list, guiding
                                 the evolution of the system.
                             </CardFooter>
+                        <div className="box">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                         </Card>
                     </AccordionItem>
+                    <CarouselTransition />
                     <AccordionItem
                         id="2"
                         title="Video editing and motion graphics portfolio"
@@ -136,7 +150,7 @@ const Home = () => {
                         isFirstChild={false}
                         isLastChild={true}
                     >
-                        <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-auto ">
+                        <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2  gap-4 m-auto ">
                             <Card className="cards-portfolio m-auto">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
@@ -283,6 +297,7 @@ const Home = () => {
                     </AccordionItem>
                 </AccordionBasicExample>
             </section>
+
         </div>
     )
 }
