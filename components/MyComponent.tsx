@@ -22,7 +22,7 @@ interface CarouselWithContentProps {
     }
 }
 
-export function CarouselWithContent(props: CarouselWithContentProps) {
+export function CarouselWithContent() {
     return (
         <Carousel
             className="rounded-xl"
