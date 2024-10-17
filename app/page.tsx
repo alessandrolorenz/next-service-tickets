@@ -46,15 +46,15 @@ const Home = () => {
                 >
                     <div className={styles.caption}>
                         <h6>
-                            Video Editing and Motion Graphics Portfolio Website
+                            FRONT END - HTML/CSS JAVASCRIPT - Video Editing and Motion Graphics
                         </h6>
                         <h2>
                             <em>ALESSANDRO</em> LORENZ
                         </h2>
                         <div className={`${styles["main-button"]} `}>
                             <div className={`${styles["scroll-to-section"]} `}>
-                                <a href="https://github.com/alessandrolorenz/next-service-tickets">
-                                    GITHUB REPOSITORY
+                                <a href="https://github.com/alessandrolorenz">
+                                    GITHUB PROFILE
                                 </a>
                             </div>
                         </div>

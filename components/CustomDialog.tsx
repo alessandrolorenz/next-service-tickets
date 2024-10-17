@@ -35,8 +35,9 @@ export function CustomDialog(props: CustomDialogProps) {
                     <AlertDialogHeader>
                         <AlertDialogTitle>{props.title}</AlertDialogTitle>
                         <AlertDialogDescription>
-                            {props.children}
+                            {props.content}
                         </AlertDialogDescription>
+                            {props.children}
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                         <AlertDialogCancel>Close</AlertDialogCancel>
