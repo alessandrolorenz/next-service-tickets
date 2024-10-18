@@ -46,7 +46,8 @@ const Home = () => {
                 >
                     <div className={styles.caption}>
                         <h6>
-                            FRONT END - HTML/CSS JAVASCRIPT - Video Editing and Motion Graphics
+                            FRONT END - HTML/CSS JAVASCRIPT - Video Editing and
+                            Motion Graphics
                         </h6>
                         <h2>
                             <em>ALESSANDRO</em> LORENZ
@@ -63,7 +64,7 @@ const Home = () => {
             </section>
 
             <section>
-                <AccordionBasicExample defaultOpenId="1">
+                <AccordionBasicExample defaultOpenId={["1", "3"]}>
                     <AccordionItem
                         id="1"
                         title="Project description"
@@ -74,7 +75,7 @@ const Home = () => {
                     >
                         <Card className="mx-0 mb-4 lg:col-span-3 lg:mr-0 relative">
                             <CardHeader>
-                                <CardTitle>Welcome </CardTitle>
+                                <CardTitle>Welcome</CardTitle>
                                 <CardDescription>
                                     <b> Alessandro Cunha Lorenz</b> - Front End
                                     Developer
@@ -92,63 +93,36 @@ const Home = () => {
                                 as a Front End Developer.
                             </CardContent>
                             <CardContent className="max-w-full prose dark:prose-invert">
-                                I have professional hands-on experience in Front
-                                End Development, utilizing technologies such as
-                                HTML/CSS, JavaScript, React, NextJs, Vue, SCSS,
-                                Webpack, Node, and MongoDB. I started my
-                                developer career as a Back End Developer but
-                                shifted to the Front End due to my motion
-                                graphics background.
-                                <br></br>I enjoy being at the forefront of
-                                innovation and I am fascinated by new
-                                technologies and the endless possibilities they
-                                offer to make the world a better place.
+                                This website showcases my portfolio of videos
+                                created using Adobe AfterEffects, Illustrator,
+                                PhotoShop, and Premiere. I have also included a
+                                system I developed while undertaking a Next.js
+                                course.
                             </CardContent>
-                            <CardContent className="max-w-full prose dark:prose-invert">
-                                This project was developed using a stack
-                                comprising Typescript, ReactJs, NextJs, CSS
-                                modules, Tailwind, Prisma, and CI/CD with
-                                Vercel. The homepage, designed with CSS modules,
-                                employs a best practice to isolate styles
-                                effectively and Iused some
-                                https://ui.shadcn.com/ components to speed up
-                                the development process. It showcases my
-                                portfolio of videos created using Adobe
-                                AfterEffects, Illustrator, PhotoShop, and
-                                Premiere.
-                            </CardContent>
-                            <CardFooter>
-                                Also included is a system I developed while
-                                undertaking a Next.js course. This system serves
-                                as a Ticket Services platform, enabling the
-                                creation of tickets or tasks related to ongoing
-                                project activities. A user can create, edit,
-                                delete, and mark as completed a ticket. It
-                                serves as my comprehensive to-do list, guiding
-                                the evolution of the system.
-                            </CardFooter>
-                        <div className="box">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
+                            <div className="box">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
                         </Card>
                     </AccordionItem>
-                    <CarouselTransition />
+                    <div className="mt-4 mb-4">
+                        <CarouselTransition />
+                    </div>
                     <AccordionItem
                         id="2"
                         title="Video editing and motion graphics portfolio"
                         activeElement={null}
                         handleClick={function (id: string): void {}}
                         isFirstChild={false}
-                        isLastChild={true}
+                        isLastChild={false}
                     >
                         <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2  gap-4 m-auto ">
                             <Card className="cards-portfolio m-auto">
@@ -295,9 +269,49 @@ const Home = () => {
                             </Card>
                         </div>
                     </AccordionItem>
+
+                    <AccordionItem
+                        id="3"
+                        title="Portfolio of projects"
+                        activeElement={"true"}
+                        handleClick={function (id: string): void {}}
+                        isFirstChild={false}
+                        isLastChild={true}
+                    >
+                        <CardContent className="max-w-full prose dark:prose-invert">
+                            I have professional hands-on experience in Front End
+                            Development, utilizing technologies such as
+                            HTML/CSS, JavaScript, React, NextJs, Vue, SCSS,
+                            Webpack, Node, and MongoDB. I started my developer
+                            career as a Back End Developer but shifted to the
+                            Front End due to my motion graphics background.
+                            <br></br>I enjoy being at the forefront of
+                            innovation and I am fascinated by new technologies
+                            and the endless possibilities they offer to make the
+                            world a better place.
+                        </CardContent>
+                        <CardContent className="max-w-full prose dark:prose-invert">
+                            This project was developed using a stack comprising
+                            Typescript, ReactJs, NextJs, CSS modules, Tailwind,
+                            Prisma, and CI/CD with Vercel. The homepage,
+                            designed with CSS modules, employs a best practice
+                            to isolate styles effectively and Iused some
+                            https://ui.shadcn.com/ components to speed up the
+                            development process.
+                        </CardContent>
+                        <CardFooter>
+                            Also included is a system I developed while
+                            undertaking a Next.js course. This system serves as
+                            a Ticket Services platform, enabling the creation of
+                            tickets or tasks related to ongoing project
+                            activities. A user can create, edit, delete, and
+                            mark as completed a ticket. It serves as my
+                            comprehensive to-do list, guiding the evolution of
+                            the system.
+                        </CardFooter>
+                    </AccordionItem>
                 </AccordionBasicExample>
             </section>
-
         </div>
     )
 }

@@ -2,11 +2,11 @@ import React, { useState, ReactNode, useEffect } from 'react';
 
 interface AccordionBasicExampleProps {
     children: ReactNode;
-    defaultOpenId?: string; // Adiciona a prop para o ID do elemento aberto por padrão
+    defaultOpenId?: string[]; // Adiciona a prop para o ID do elemento aberto por padrão
 }
 
 const AccordionBasicExample = ({ children, defaultOpenId }: AccordionBasicExampleProps): JSX.Element => {
-    const [activeElement, setActiveElement] = useState<string[]>(defaultOpenId ? [defaultOpenId] : []);
+    const [activeElement, setActiveElement] = useState<string[]>(defaultOpenId ? [...defaultOpenId] : []);
 
     const handleClick = (id: string) => {
         setActiveElement((prevActiveElements) => {

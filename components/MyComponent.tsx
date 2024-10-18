@@ -29,7 +29,7 @@ export function CarouselWithContent() {
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
-        >
+            >
           <Slidecard
                 textCenter={true}
                 title={"MUNDO DA LEITURA NA TV"}
@@ -42,16 +42,16 @@ export function CarouselWithContent() {
                     content="Examples of some of the videos"
                 >
                     <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto ">
-                        <Card className="cards-portfolio m-auto col-span-2 w-full ">
-                            <CardHeader className="cards-portfolio-header">
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Programa Mundo da Leirura na TV
                                 </CardTitle>
-                                <CardDescription className="portfolio-card-description text-sm">
+                                <CardDescription className="portfolio-card-description text-sm  p-3 sm:p-6">
                                     Covil dos Mandriões / UPFTV-Canal Futura
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent className="card-content prose dark:prose-invert flex justify-center m-auto w-full max-w-full">
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
                                 <iframe
                                     className="iframe-video m-auto"
                                     src="https://www.youtube.com/embed/zu4f-hAqvVg"
@@ -61,7 +61,7 @@ export function CarouselWithContent() {
                                     allowFullScreen
                                 ></iframe>
                             </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm">
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
                                 Programa Infantil Mundo da Leitura na TV
                                 produzido pela UPFTV e Canal Futura. Projeto que
                                 tive a honra de fazer parte por 10 anos.
@@ -69,7 +69,7 @@ export function CarouselWithContent() {
                         </Card>
 
                         <Card className="cards-portfolio m-auto">
-                            <CardHeader className="cards-portfolio-header">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
                                 {/* <div className="flex justify-between mb-3">
                                         <TicketStatusBadge status="OPEN" />
                                     <TicketPriority priority="HIGH" />
@@ -81,7 +81,7 @@ export function CarouselWithContent() {
                                     História do Homem do Cairo
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent className="card-content prose dark:prose-invert flex justify-center">
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center  p-3 sm:p-6">
                                 <iframe
                                     className="iframe-video"
                                     src="https://www.youtube.com/embed/ZoNVUIQghdc"
@@ -92,13 +92,13 @@ export function CarouselWithContent() {
                                     allowFullScreen
                                 ></iframe>
                             </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm">
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
                                 Quadro do programa no qual eram produzidas
                                 diversas histórias em diversos formatos.
                             </CardFooter>
                         </Card>
                         <Card className="cards-portfolio m-auto">
-                            <CardHeader className="cards-portfolio-header">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
                                 {/* <div className="flex justify-between mb-3">
                                         <TicketStatusBadge status="OPEN" />
                                     <TicketPriority priority="HIGH" />
@@ -111,7 +111,7 @@ export function CarouselWithContent() {
                                     Futura
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent className="card-content prose dark:prose-invert flex justify-center">
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center  p-3 sm:p-6">
                                 <iframe
                                     className="iframe-video"
                                     src="https://www.youtube.com/embed/LTZ2ZztZ2oU"
@@ -121,7 +121,7 @@ export function CarouselWithContent() {
                                     allowFullScreen
                                 ></iframe>
                             </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm">
+                            <CardFooter className="portfolio-card-footer text-sm p-3 sm:p-6">
                                 Quadro do programa no qual o personagem
                                 Mil-Faces.
                             </CardFooter>
@@ -141,9 +141,9 @@ export function CarouselWithContent() {
                     buttonTitle={"explore"}
                     content="Examples of some of the videos"
                 >
-                    <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto ">
+                    <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto">
                         <Card className="cards-portfolio m-auto">
-                            <CardHeader className="cards-portfolio-header">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
                                 {/* <div className="flex justify-between mb-3">
                                         <TicketStatusBadge status="OPEN" />
                                     <TicketPriority priority="HIGH" />
@@ -155,7 +155,7 @@ export function CarouselWithContent() {
                                     Videos criados
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
                                 <iframe
                                     className="iframe-video"
                                     src="https://www.youtube.com/embed/f-JBNirfbNQ"
@@ -166,13 +166,13 @@ export function CarouselWithContent() {
                                     allowFullScreen
                                 ></iframe>
                             </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm">
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
                                 Updated:{" "}
                             </CardFooter>
                         </Card>
 
                         <Card className="cards-portfolio m-auto">
-                            <CardHeader className="cards-portfolio-header">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
                                 {/* <div className="flex justify-between mb-3">
                                         <TicketStatusBadge status="OPEN" />
                                     <TicketPriority priority="HIGH" />
@@ -184,7 +184,7 @@ export function CarouselWithContent() {
                                     Videos criados
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
                                 <iframe
                                     className="iframe-video"
                                     src="https://www.youtube.com/embed/kNSwVQU8hd8"
@@ -195,7 +195,7 @@ export function CarouselWithContent() {
                                     allowFullScreen
                                 ></iframe>
                             </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm">
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
                                 Updated:{" "}
                             </CardFooter>
                         </Card>
