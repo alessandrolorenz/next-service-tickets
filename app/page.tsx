@@ -13,6 +13,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import CarouselTransition from "@/components/MyComponent"
+import Link from "next/link"
 
 const Home = () => {
     return (
@@ -113,7 +114,7 @@ const Home = () => {
                             </div>
                         </Card>
                     </AccordionItem>
-                    <div className="mt-4 mb-4">
+                    <div className="mt-8 mb-8">
                         <CarouselTransition />
                     </div>
                     <AccordionItem
@@ -308,7 +309,16 @@ const Home = () => {
                             mark as completed a ticket. It serves as my
                             comprehensive to-do list, guiding the evolution of
                             the system.
+                      
+                           
                         </CardFooter>
+                                <Link
+                                    href="/ticket-app"
+                                    className='navbar-link cursor-default text-primary/70 hover:text-primary/60 m-auto'
+                                    key="Tickets App"
+                                >
+                                    Tickets App
+                                </Link>
                     </AccordionItem>
                 </AccordionBasicExample>
             </section>
