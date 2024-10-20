@@ -36,7 +36,7 @@ const MainNavLinks = ({ role, onTicketsAppClick, onHomeClick }: MainNavLinksProp
         <div className="flex flex-col lg:flex-row items-center gap-2">
             {links
                 .filter((link) => {
-                    if (link.label === 'Home' || link.label === 'Tickets App') {
+                    if (link.label === 'Home') {
                         return true;
                     }
                     return showAdditionalLinks && (!link.adminOnly || role === 'ADMIN');
