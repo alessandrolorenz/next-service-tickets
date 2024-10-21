@@ -212,6 +212,7 @@
     height: 100%;
     position: absolute;
     width: 100%;
+    pointer-events: none;
   }
   .box div {
     position: absolute;
