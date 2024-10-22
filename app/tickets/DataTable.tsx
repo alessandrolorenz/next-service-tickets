@@ -21,7 +21,7 @@ interface Props {
 
 const DataTable = async ({ tickets, searchParams }: Props) => {
     return (
-        <div className="w-full mt-5">
+        <div className="w-full m-5">
             <div className="rounded-md sm:border">
                 <Table>
                     <TableHeader>
