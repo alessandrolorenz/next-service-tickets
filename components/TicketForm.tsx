@@ -1,25 +1,25 @@
-'use client'
-import React, { useState } from 'react'
-import { Form, FormControl, FormField, FormItem, FormLabel } from './ui/form'
-import { ticketSchema } from '@/ValidationSchemas/ticket'
-import { z } from 'zod'
-import { Controller, useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Input } from './ui/input'
-import SimpleMDE from 'react-simplemde-editor'
-import 'easymde/dist/easymde.min.css'
+"use client"
+import React, { useState } from "react"
+import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form"
+import { ticketSchema } from "@/ValidationSchemas/ticket"
+import { z } from "zod"
+import { Controller, useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { Input } from "./ui/input"
+import SimpleMDE from "react-simplemde-editor"
+import "easymde/dist/easymde.min.css"
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from './ui/select'
-import { Button } from './ui/button'
-import axios from 'axios'
-import { useRouter } from 'next/navigation'
-import { Ticket } from '@prisma/client'
-import { Calendar } from './ui/calendar'
+} from "./ui/select"
+import { Button } from "./ui/button"
+import axios from "axios"
+import { useRouter } from "next/navigation"
+import { Ticket } from "@prisma/client"
+import { Calendar } from "./ui/calendar"
 
 type TicketFormData = z.infer<typeof ticketSchema>
 
@@ -30,13 +30,25 @@ interface Props {
 const TicketForm = ({ ticket }: Props) => {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [date, setDate] = React.useState<Date | undefined>(new Date())
+    const [dateSelected, setDateSelected] = React.useState<Date | undefined>(
+        ticket && ticket.createdAt ? ticket.createdAt : new Date()
+    )
+    React.useEffect(() => {
+        const today = new Date()
+        setDate(today)
+    }, [])
 
     const handleDateClick = (selectedDate: Date) => {
-        console.log('Date clicked:', selectedDate)
-        setDate(selectedDate)
+        console.log("Date clicked:", selectedDate)
+        setDateSelected(selectedDate)
     }
 
-    const [error, setError] = useState('')
+    // const handleDateClick = (selectedDate: Date) => {
+    //     console.log('Date clicked:', selectedDate)
+    //     setDate(selectedDate)
+    // }
+
+    const [error, setError] = useState("")
     const router = useRouter()
 
     const form = useForm<TicketFormData>({
@@ -46,18 +58,18 @@ const TicketForm = ({ ticket }: Props) => {
     async function onSubmit(values: z.infer<typeof ticketSchema>) {
         try {
             setIsSubmitting(true)
-            setError('')
+            setError("")
 
             if (ticket) {
-                await axios.patch('/api/tickets/' + ticket.id, values)
+                await axios.patch("/api/tickets/" + ticket.id, values)
             } else {
-                await axios.post('/api/tickets', values)
+                await axios.post("/api/tickets", values)
             }
             setIsSubmitting(false)
-            router.push('/tickets')
+            router.push("/tickets")
             router.refresh()
         } catch (error) {
-            setError('Unknown Error Occured.')
+            setError("Unknown Error Occured.")
             setIsSubmitting(false)
         }
     }
@@ -166,18 +178,22 @@ const TicketForm = ({ ticket }: Props) => {
                                 </FormItem>
                             )}
                         />
-                    <Calendar
-                        mode="single"
-                        selected={date}
-                        onSelect={setDate}
-                        className="rounded-md border"
-                        onDayClick={handleDateClick}
-                    />
+                        <Calendar
+                            mode="single"
+                            selected={dateSelected}
+                            today={date}
+                            onSelect={setDateSelected}
+                            className="rounded-md border"
+                            onDayClick={handleDateClick}
+                            disabled={{
+                                before: new Date(),
+                                after: ticket && ticket.createdAt ? ticket.createdAt : undefined,
+                            }}
+                        />
                     </div>
 
-                
                     <Button type="submit" disabled={isSubmitting}>
-                        {ticket ? 'Update Ticket' : 'Create Ticket'}
+                        {ticket ? "Update Ticket" : "Create Ticket"}
                     </Button>
                 </form>
             </Form>

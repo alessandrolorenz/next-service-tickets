@@ -38,7 +38,7 @@ const getUserInitial = (name: string) => {
 
 
             <div className="flex items-center gap-2">
-            {showAuthLinks && (
+            {!isHomeOrRoot && (
                     <>
                         {session ? (
                             <>

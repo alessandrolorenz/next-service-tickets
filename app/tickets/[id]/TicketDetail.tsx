@@ -1,6 +1,6 @@
-'use client'
-import { Ticket, User } from '@prisma/client'
-import React from 'react'
+"use client"
+import { Ticket, User } from "@prisma/client"
+import React from "react"
 import {
     Card,
     CardContent,
@@ -8,17 +8,17 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from '@/components/ui/card'
-import TicketStatusBadge from '@/components/TicketStatusBadge'
-import TicketPriority from '@/components/TicketPriority'
-import Link from 'next/link'
-import { buttonVariants } from '@/components/ui/button'
-import ReactMarkDown from 'react-markdown'
-import DeleteButton from './DeleteButton'
-import AssignTicket from '@/components/AssignTicket'
+} from "@/components/ui/card"
+import TicketStatusBadge from "@/components/TicketStatusBadge"
+import TicketPriority from "@/components/TicketPriority"
+import Link from "next/link"
+import { buttonVariants } from "@/components/ui/button"
+import ReactMarkDown from "react-markdown"
+import DeleteButton from "./DeleteButton"
+import AssignTicket from "@/components/AssignTicket"
 
-import EditDialog from './EditDialog'
-import { Calendar } from '@/components/ui/calendar'
+import EditDialog from "./EditDialog"
+import { Calendar } from "@/components/ui/calendar"
 
 interface Props {
     ticket: Ticket
@@ -28,12 +28,18 @@ interface Props {
 }
 
 const TicketDetail = ({ ticket, users, session }: Props) => {
-
     const [date, setDate] = React.useState<Date | undefined>(new Date())
+    const [dateSelected, setDateSelected] = React.useState<Date | undefined>(
+        ticket.createdAt
+    )
+    React.useEffect(() => {
+        const today = new Date()
+        setDate(today)
+    }, [])
 
     const handleDateClick = (selectedDate: Date) => {
-        console.log('Date clicked:', selectedDate)
-        setDate(selectedDate)
+        console.log("Date clicked:", selectedDate)
+        setDateSelected(selectedDate)
     }
 
     return (
@@ -46,13 +52,13 @@ const TicketDetail = ({ ticket, users, session }: Props) => {
                     </div>
                     <CardTitle>{ticket.title}</CardTitle>
                     <CardDescription>
-                        Created:{' '}
-                        {ticket.createdAt.toLocaleDateString('en-US', {
-                            year: '2-digit',
-                            month: '2-digit',
-                            day: '2-digit',
-                            hour: 'numeric',
-                            minute: '2-digit',
+                        Created:{" "}
+                        {ticket.createdAt.toLocaleDateString("en-US", {
+                            year: "2-digit",
+                            month: "2-digit",
+                            day: "2-digit",
+                            hour: "numeric",
+                            minute: "2-digit",
                             hour12: true,
                         })}
                     </CardDescription>
@@ -61,51 +67,49 @@ const TicketDetail = ({ ticket, users, session }: Props) => {
                     <ReactMarkDown>{ticket.description}</ReactMarkDown>
                 </CardContent>
                 <CardFooter>
-                    Updated:{' '}
-                    {ticket.updatedAt.toLocaleDateString('en-US', {
-                        year: '2-digit',
-                        month: '2-digit',
-                        day: '2-digit',
-                        hour: 'numeric',
-                        minute: '2-digit',
+                    Updated:{" "}
+                    {ticket.updatedAt.toLocaleDateString("en-US", {
+                        year: "2-digit",
+                        month: "2-digit",
+                        day: "2-digit",
+                        hour: "numeric",
+                        minute: "2-digit",
                         hour12: true,
                     })}
                 </CardFooter>
             </Card>
             <div className="mx-4 flex lg:flex-col lg:mx-0 gap-2">
-
-
-            {session && session.user?.role === 'ADMIN'  ? <AssignTicket ticket={ticket} users={users} /> : ''}
-
-                {session ? (
-                    <Link
-                        href={`/tickets/edit/${ticket.id}`}
-                        className={`${buttonVariants({
-                            variant: 'default',
-                        })}`}
-                    >
-                        Edit Ticket
-                    </Link>
-                ) : (
-                    <EditDialog
-                        ticketId={ticket.id}
-                        authenticated={false}
-                    />
-                )}
-
-                <DeleteButton
+                {session && session.user?.role === "ADMIN" ? (
+                    <>
+                        <AssignTicket ticket={ticket} users={users} />
+                        <Link
+                            href={`/tickets/edit/${ticket.id}`}
+                            className={`${buttonVariants({
+                                variant: "default",
+                            })}`}
+                        >
+                            Edit Ticket
+                        </Link>
+                        <DeleteButton
                     ticketId={ticket.id}
-                    authenticated={session && session.user?.role === 'ADMIN' ? true : false}
+                    authenticated={
+                        session && session.user?.role === "ADMIN" ? true : false
+                    }
                 />
-            </div>
-                   <Calendar
+                    </>
+                ) : (
+                    ""
+                )}
+                <Calendar
                     mode="single"
-                    selected={ticket.createdAt}
-                    onSelect={setDate}
+                    selected={dateSelected}
+                    today={date}
+                    onSelect={setDateSelected}
                     className="rounded-md border"
                     onDayClick={handleDateClick}
+                    disabled={{ before: new Date(), after: ticket.createdAt }}
                 />
-                
+            </div>
         </div>
     )
 }

@@ -36,17 +36,15 @@ export function Slidecard(props: slidecardProps) {
                             : "pl-12 md:w-2/4 md:pl-20 lg:pl-32"
                     }`}
                 >
-       
-                        <CardTitle className="uppercase text-3xl md:text-4xl lg:text-5xl mb-6">
-                            {" "}
-                            {props.title}
-                        </CardTitle>
-                        <CardTitle className="mb-12 opacity-80">
-                            {" "}
+                    <CardTitle className="uppercase text-3xl md:text-4xl lg:text-5xl mb-6">
+                        {" "}
+                        {props.title}
+                    </CardTitle>
+                    <CardTitle className="mb-12 opacity-80">
+                        {" "}
                         {props.description}
-                        </CardTitle>
-                
-            
+                    </CardTitle>
+
                     {props.children}
                 </div>
             </div>
