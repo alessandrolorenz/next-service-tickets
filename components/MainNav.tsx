@@ -3,12 +3,17 @@
 
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import ToggleMode from './ToggleMode'
 import MainNavLinks from './MainNavLinks'
 
 
 const MainNav =  ({ session }: { session: any }) => {
     const [showAuthLinks, setShowAuthLinks] = useState(false);
+    const pathname = usePathname()
+
+    const isHomeOrRoot = pathname === '/' || pathname === '/home'
+
 
     const handleTicketsAppClick = () => {
         setShowAuthLinks(true);
@@ -22,10 +27,15 @@ const getUserInitial = (name: string) => {
 };
     return (
         <div className="flex justify-between">
-            <MainNavLinks role={session?.user.role} 
-                 onTicketsAppClick={handleTicketsAppClick}
-                 onHomeClick={handleHomeClick}
-            />
+
+{!isHomeOrRoot && (
+    <MainNavLinks 
+        role={session?.user.role} 
+        onTicketsAppClick={handleTicketsAppClick}
+        onHomeClick={handleHomeClick}
+    />
+)}
+
 
             <div className="flex items-center gap-2">
             {showAuthLinks && (

@@ -14,7 +14,7 @@ const MainNavLinks = ({ role, onTicketsAppClick, onHomeClick }: MainNavLinksProp
 
     const links = [
         { label: 'Home', href: '/', adminOnly: false },
-        { label: 'Tickets App', href: '/ticket-app', adminOnly: false },
+        { label: 'Tickets App', href: '/dashboard', adminOnly: false },
         { label: 'Dashboard', href: '/dashboard', adminOnly: false },
         { label: 'Tickets', href: '/tickets', adminOnly: false },
         { label: 'Users', href: '/users', adminOnly: true },
@@ -23,13 +23,9 @@ const MainNavLinks = ({ role, onTicketsAppClick, onHomeClick }: MainNavLinksProp
     const currentPath = usePathname();
 
     const handleLinkClick = (label: string) => {
-        if (label !== '/') {
-            setShowAdditionalLinks(true);
-            onTicketsAppClick();
-        } else {
-            setShowAdditionalLinks(false);
-            onHomeClick();
-        }
+        setShowAdditionalLinks(true);
+        onTicketsAppClick();
+
     };
 
     return (
