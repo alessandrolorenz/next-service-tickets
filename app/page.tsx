@@ -45,11 +45,15 @@ const Home = () => {
                 </video>
 
                 <div
-                    className={`${styles["video-overlay"]} ${styles["header-text"]} ${styles[theme === "light" ? "light" : "dark"]}`}
+                    className={`${styles["video-overlay"]} ${
+                        styles["header-text"]
+                    } ${styles[theme === "light" ? "light" : "dark"]}`}
                 >
                     <div className={styles.caption}>
-                        <CardTitle className="uppercase">FRONT END - HTML/CSS JAVASCRIPT - Video Editing and
-                        Motion Graphics</CardTitle>
+                        <CardTitle className="uppercase">
+                            FRONT END - HTML/CSS JAVASCRIPT - Video Editing and
+                            Motion Graphics
+                        </CardTitle>
                         <h2>
                             <em>ALESSANDRO</em> LORENZ
                         </h2>
@@ -279,8 +283,8 @@ const Home = () => {
                         isFirstChild={false}
                         isLastChild={true}
                     >
-                        <Card className="mx-0 mb-4 lg:col-span-3 lg:mr-0 relative">
-                            <CardContent className="max-w-full prose dark:prose-invert">
+                        <Card className="mx-0 mb-4 lg:col-span-3 lg:mr-0 relative ">
+                            <CardContent className="max-w-full prose dark:prose-invert mt-4">
                                 I have professional hands-on experience in Front
                                 End Development, utilizing technologies such as
                                 HTML/CSS, JavaScript, React, NextJs, Vue, SCSS,
@@ -293,7 +297,7 @@ const Home = () => {
                                 technologies and the endless possibilities they
                                 offer to make the world a better place.
                             </CardContent>
-                            <CardContent className="max-w-full prose dark:prose-invert">
+                            <CardContent className="max-w-full prose dark:prose-invert mt-4">
                                 This project was developed using a stack
                                 comprising Typescript, ReactJs, NextJs, CSS
                                 modules, Tailwind, Prisma, and CI/CD with
