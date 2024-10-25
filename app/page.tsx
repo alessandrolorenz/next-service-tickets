@@ -17,7 +17,7 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 
 const Home = () => {
-    const { theme } = useTheme(); // Usa o hook useTheme para obter o tema ativo
+    const { theme } = useTheme() // Usa o hook useTheme para obter o tema ativo
     return (
         <div>
             <section
@@ -130,97 +130,96 @@ const Home = () => {
                         isLastChild={false}
                     >
                         <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2  gap-4 m-auto ">
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    After Effects Portfolio
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
+                                    Demo Reel
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video m-auto"
+                                    src="https://www.youtube.com/embed/5NlHDliKrmc"
+                                    title="Demo Reel"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                            </CardFooter>
+                        </Card>
                             <Card className="cards-portfolio m-auto">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Programa Mundo da Leirura na TV
+                                        Videos Adobe AfterEffects
                                     </CardTitle>
                                     <CardDescription className="portfolio-card-description text-sm">
-                                        Covil dos Mandriões / UPFTV-Canal Futura
+                                        Vinheta Rádio UPF
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="card-content prose dark:prose-invert flex justify-center">
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
                                         className="iframe-video"
-                                        src="https://www.youtube.com/embed/zu4f-hAqvVg"
+                                        src="https://www.youtube.com/embed/flZ2ZFfjgLw"
                                         title="Mundo da Leirura - Covil dos Mandriões"
                                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerPolicy="strict-origin-when-cross-origin"
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm">
-                                    Programa Infantil Mundo da Leitura na TV
-                                    produzido pela UPFTV e Canal Futura. Projeto
-                                    que tive a honra de fazer parte por 10 anos.
-                                </CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm"></CardFooter>
                             </Card>
 
                             <Card className="cards-portfolio m-auto">
                                 <CardHeader className="cards-portfolio-header">
-                                    {/* <div className="flex justify-between mb-3">
-                                        <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" />
-                                    </div> */}
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Contação de História
+                                        Videos Adobe AfterEffects
                                     </CardTitle>
                                     <CardDescription className="portfolio-card-description text-sm">
-                                        História do Homem do Cairo
+                                        VT UPF Idiomas
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="card-content prose dark:prose-invert flex justify-center">
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
                                         className="iframe-video"
-                                        src="https://www.youtube.com/embed/ZoNVUIQghdc"
-                                        title="HISTORIA HOMEM DO CAIRO 01"
+                                        src="https://www.youtube.com/embed/hKzpu5Or36I"
+                                        title="VT UPF Idiomas"
                                         frameBorder="0"
                                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerPolicy="strict-origin-when-cross-origin"
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm">
-                                    Quadro do programa no qual eram produzidas
-                                    diversas histórias em diversos formatos.
-                                </CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm"></CardFooter>
                             </Card>
                             <Card className="cards-portfolio m-auto">
                                 <CardHeader className="cards-portfolio-header">
-                                    {/* <div className="flex justify-between mb-3">
-                                        <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" />
-                                    </div> */}
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Programa Mundo da Leituta na TV
+                                        Videos Adobe AfterEffects
                                     </CardTitle>
                                     <CardDescription className="portfolio-card-description text-sm">
-                                        Quadro Oficina: Fantoche - UPFTV / Canal
-                                        Futura
+                                        Chamada Hora da Notícia
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="card-content prose dark:prose-invert flex justify-center">
+                                <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
                                         className="iframe-video"
-                                        src="https://www.youtube.com/embed/LTZ2ZztZ2oU"
-                                        title="OFICINA 285 FANTOCHE"
+                                        src="https://www.youtube.com/embed/jNd45h2vcBs"
+                                        title="Chamada Hora da Notícia"
                                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerPolicy="strict-origin-when-cross-origin"
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm">
-                                    Quadro do programa no qual o personagem
-                                    Mil-Faces.
-                                </CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm"></CardFooter>
                             </Card>
 
                             <Card className="cards-portfolio m-auto">
                                 <CardHeader className="cards-portfolio-header">
-                                    {/* <div className="flex justify-between mb-3">
-                                        <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" />
-                                    </div> */}
                                     <CardTitle className="portfolio-card-title text-lg">
                                         Videos Adobe AfterEffects
                                     </CardTitle>
@@ -244,12 +243,8 @@ const Home = () => {
                                 </CardFooter>
                             </Card>
 
-                            <Card className="cards-portfolio m-auto">
-                                <CardHeader className="cards-portfolio-header">
-                                    {/* <div className="flex justify-between mb-3">
-                                        <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" />
-                                    </div> */}
+                            <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
                                         Videos Adobe AfterEffects
                                     </CardTitle>

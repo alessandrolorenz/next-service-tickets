@@ -12,29 +12,20 @@ import {
 } from "@/components/ui/card"
 import { Slidecard } from "./SlideCard"
 
-interface CarouselWithContentProps {
-    slidesNumber?: number
-    slide: {
-        title?: string
-        description?: string
-        image?: string
-        children?: ReactNode
-    }
-}
-
 export function CarouselWithContent() {
-    
     return (
         <Carousel
             className="rounded-xl"
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
-            >
-          <Slidecard
+        >
+            <Slidecard
                 textCenter={true}
                 title={"MUNDO DA LEITURA NA TV"}
-                description={"Programa Infantil Mundo da Leitura na TV produzido pela UPFTV e Canal Futura. Premiado projeto que tive a honra de fazer parte por 10 anos."}
+                description={
+                    "Programa Infantil Mundo da Leitura na TV produzido pela UPFTV e Canal Futura. Premiado projeto que tive a honra de fazer parte por 10 anos."
+                }
                 image={`mundo-da-leitura.png`}
             >
                 <CustomDialog
@@ -48,7 +39,7 @@ export function CarouselWithContent() {
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Programa Mundo da Leirura na TV
                                 </CardTitle>
-                                <CardDescription className="portfolio-card-description text-sm  p-3 sm:p-6">
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
                                     Covil dos Mandriões / UPFTV-Canal Futura
                                 </CardDescription>
                             </CardHeader>
@@ -63,18 +54,55 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Programa Infantil Mundo da Leitura na TV
-                                produzido pela UPFTV e Canal Futura. Projeto que
-                                tive a honra de fazer parte por 10 anos.
+                            </CardFooter>
+                        </Card>
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Programa Mundo da Leirura na TV
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
+                                    Episódio 01 - UPFTV-Canal Futura
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video m-auto"
+                                    src="https://www.youtube.com/embed/jJCa3hq5dds"
+                                    title="MUNDO DA LEITURA ESPECIAL DE NATAL SD"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                            </CardFooter>
+                        </Card>
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Programa Mundo da Leirura na TV
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
+                                    Dramaturgia
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video m-auto"
+                                    src="https://www.youtube.com/embed/i5bmV70blKU"
+                                    title="Dramaturgia"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
                             </CardFooter>
                         </Card>
 
                         <Card className="cards-portfolio m-auto">
                             <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
-                                {/* <div className="flex justify-between mb-3">
-                                        <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" />
-                                    </div> */}
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Contação de História
                                 </CardTitle>
@@ -82,7 +110,7 @@ export function CarouselWithContent() {
                                     História do Homem do Cairo
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent className="card-content prose dark:prose-invert flex justify-center  p-3 sm:p-6">
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                 <iframe
                                     className="iframe-video"
                                     src="https://www.youtube.com/embed/ZoNVUIQghdc"
@@ -100,10 +128,6 @@ export function CarouselWithContent() {
                         </Card>
                         <Card className="cards-portfolio m-auto">
                             <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
-                                {/* <div className="flex justify-between mb-3">
-                                        <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" />
-                                    </div> */}
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Programa Mundo da Leituta na TV
                                 </CardTitle>
@@ -112,7 +136,7 @@ export function CarouselWithContent() {
                                     Futura
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent className="card-content prose dark:prose-invert flex justify-center  p-3 sm:p-6">
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                 <iframe
                                     className="iframe-video"
                                     src="https://www.youtube.com/embed/LTZ2ZztZ2oU"
@@ -127,7 +151,6 @@ export function CarouselWithContent() {
                                 Mil-Faces.
                             </CardFooter>
                         </Card>
-
                     </div>
                 </CustomDialog>
             </Slidecard>
@@ -145,15 +168,11 @@ export function CarouselWithContent() {
                     <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto">
                         <Card className="cards-portfolio m-auto">
                             <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
-                                {/* <div className="flex justify-between mb-3">
-                                        <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" />
-                                    </div> */}
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Videos Adobe AfterEffects
                                 </CardTitle>
                                 <CardDescription className="portfolio-card-description text-sm">
-                                    Videos criados
+                                    Chamada Facebook UPFTV
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
@@ -174,15 +193,11 @@ export function CarouselWithContent() {
 
                         <Card className="cards-portfolio m-auto">
                             <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
-                                {/* <div className="flex justify-between mb-3">
-                                        <TicketStatusBadge status="OPEN" />
-                                    <TicketPriority priority="HIGH" />
-                                    </div> */}
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Videos Adobe AfterEffects
                                 </CardTitle>
                                 <CardDescription className="portfolio-card-description text-sm">
-                                    Videos criados
+                                    Institucional Alyaprime - Alyaprev
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
@@ -197,7 +212,6 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Updated:{" "}
                             </CardFooter>
                         </Card>
                     </div>
