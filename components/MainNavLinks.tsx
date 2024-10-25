@@ -1,57 +1,46 @@
-'use client'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import React, { useState } from 'react'
+"use client"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import React from "react"
 
 interface MainNavLinksProps {
-    role?: string;
-    onTicketsAppClick: () => void;
-    onHomeClick: () => void;
+    role?: string
 }
 
-const MainNavLinks = ({ role, onTicketsAppClick, onHomeClick }: MainNavLinksProps) => {
-    const [showAdditionalLinks, setShowAdditionalLinks] = useState(false);
+const MainNavLinks = ({
+    role,
+}: MainNavLinksProps) => {
 
     const links = [
-        { label: 'Home', href: '/', adminOnly: false },
-        { label: 'Tickets App', href: '/dashboard', adminOnly: false },
-        { label: 'Dashboard', href: '/dashboard', adminOnly: false },
-        { label: 'Tickets', href: '/tickets', adminOnly: false },
-        { label: 'Users', href: '/users', adminOnly: true },
-    ];
+        { label: "Home", href: "/", adminOnly: false },
+        { label: "Tickets App", href: "/ticket-app", adminOnly: false },
+        { label: "Dashboard", href: "/dashboard", adminOnly: false },
+        { label: "Tickets", href: "/tickets", adminOnly: false },
+        { label: "Users", href: "/users", adminOnly: true },
+    ]
 
-    const currentPath = usePathname();
-
-    const handleLinkClick = (label: string) => {
-        setShowAdditionalLinks(true);
-        onTicketsAppClick();
-
-    };
+    const currentPath = usePathname()
 
     return (
         <div className="flex flex-col lg:flex-row items-center gap-2">
             {links
                 .filter((link) => {
-                    if (link.label === 'Home' || link.label === 'Tickets App') {
-                        return true;
-                    }
-                    return showAdditionalLinks && (!link.adminOnly || role === 'ADMIN');
+                    return !link.adminOnly || role === "ADMIN"
                 })
                 .map((link) => (
                     <Link
                         href={link.href}
                         className={`navbar-link ${
                             currentPath == link.href &&
-                            'cursor-default text-primary/70 hover:text-primary/60'
+                            "cursor-default text-primary/70 hover:text-primary/60"
                         }`}
                         key={link.label}
-                        onClick={() => handleLinkClick(link.href)}
                     >
                         {link.label}
                     </Link>
                 ))}
         </div>
-    );
-};
+    )
+}
 
-export default MainNavLinks;
+export default MainNavLinks

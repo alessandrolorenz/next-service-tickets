@@ -135,7 +135,7 @@ const Home = () => {
                                 <CardTitle className="portfolio-card-title text-lg">
                                     After Effects Portfolio
                                 </CardTitle>
-                                <CardDescription className="portfolio-card-description text-sm  p-3 sm:p-6">
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
                                     Demo Reel
                                 </CardDescription>
                             </CardHeader>

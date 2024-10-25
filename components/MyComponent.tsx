@@ -12,16 +12,6 @@ import {
 } from "@/components/ui/card"
 import { Slidecard } from "./SlideCard"
 
-interface CarouselWithContentProps {
-    slidesNumber?: number
-    slide: {
-        title?: string
-        description?: string
-        image?: string
-        children?: ReactNode
-    }
-}
-
 export function CarouselWithContent() {
     return (
         <Carousel
@@ -49,7 +39,7 @@ export function CarouselWithContent() {
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Programa Mundo da Leirura na TV
                                 </CardTitle>
-                                <CardDescription className="portfolio-card-description text-sm  p-3 sm:p-6">
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
                                     Covil dos Mandriões / UPFTV-Canal Futura
                                 </CardDescription>
                             </CardHeader>
@@ -64,9 +54,6 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Programa Infantil Mundo da Leitura na TV
-                                produzido pela UPFTV e Canal Futura. Projeto que
-                                tive a honra de fazer parte por 10 anos.
                             </CardFooter>
                         </Card>
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
@@ -74,7 +61,7 @@ export function CarouselWithContent() {
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Programa Mundo da Leirura na TV
                                 </CardTitle>
-                                <CardDescription className="portfolio-card-description text-sm  p-3 sm:p-6">
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
                                     Episódio 01 - UPFTV-Canal Futura
                                 </CardDescription>
                             </CardHeader>
@@ -89,9 +76,6 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Programa Infantil Mundo da Leitura na TV
-                                produzido pela UPFTV e Canal Futura. Episódio
-                                especial de Natal..
                             </CardFooter>
                         </Card>
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
@@ -99,7 +83,7 @@ export function CarouselWithContent() {
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Programa Mundo da Leirura na TV
                                 </CardTitle>
-                                <CardDescription className="portfolio-card-description text-sm  p-3 sm:p-6">
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
                                     Dramaturgia
                                 </CardDescription>
                             </CardHeader>
@@ -114,9 +98,6 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Programa Infantil Mundo da Leitura na TV
-                                produzido pela UPFTV e Canal Futura. Compilado
-                                com a dramaturgia do programa.
                             </CardFooter>
                         </Card>
 
@@ -231,7 +212,6 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Updated:{" "}
                             </CardFooter>
                         </Card>
                     </div>
