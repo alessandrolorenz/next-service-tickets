@@ -38,7 +38,6 @@ const TicketDetail = ({ ticket, users, session }: Props) => {
     }, [])
 
     const handleDateClick = (selectedDate: Date) => {
-        console.log("Date clicked:", selectedDate)
         setDateSelected(selectedDate)
     }
 

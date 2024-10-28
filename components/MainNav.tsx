@@ -31,12 +31,12 @@ const MainNav = ({ session }: { session: any }) => {
                                 <span className="flex items-center justify-center w-8 h-8 bg-gray-500 text-white rounded-full">
                                     {getUserInitial(session.user.name)}
                                 </span>
-                                <Link href="/api/auth/signout?callbackUrl=/">
+                                <Link href="/api/auth/signout?callbackUrl=/ticket-app">
                                     Logout
                                 </Link>
                             </>
                         ) : (
-                            <Link href="/api/auth/signin">Login</Link>
+                            <Link href="/api/auth/signin?callbackUrl=/ticket-app">Login</Link>
                         )}
                     </>
                 )}
