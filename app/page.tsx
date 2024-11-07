@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useEffect } from "react"
 import styles from "./homepage.module.css"
 import AccordionBasicExample from "@/components/Accordions"
 import AccordionItem from "@/components/AccordionItem"
@@ -19,6 +19,14 @@ import AnimatedBanner from "@/components/AnimatedBanner"
 
 const Home = () => {
     const { theme } = useTheme() // Usa o hook useTheme para obter o tema ativo
+    const [themeState, setThemeState] = React.useState("dark")
+
+    useEffect(() => {
+        if (theme) {
+            setThemeState(theme)
+        }
+    }, [theme])
+
     return (
         <div>
             <section
@@ -48,7 +56,7 @@ const Home = () => {
                 <div
                     className={`${styles["video-overlay"]} ${
                         styles["header-text"]
-                    } ${styles[theme === "light" ? "light" : "dark"]}`}
+                    } ${styles[themeState === "light" ? "light" : "dark"]}`}
                 >
                     <div className={styles.caption}>
                         <CardTitle className="uppercase">
@@ -70,7 +78,7 @@ const Home = () => {
             </section>
 
             <section>
-                <AccordionBasicExample defaultOpenId={["1", "3"]}>
+                <AccordionBasicExample defaultOpenId={["1"]}>
                     <AccordionItem
                         id="1"
                         title="Project description"
@@ -101,113 +109,7 @@ const Home = () => {
                         </Card>
                     </AccordionItem>
 
-                    <div className={`${styles.cards} `}>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>Premiere</p>
-                                <img src="video-logos/premiere.png" alt="html" />
-                            </div>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>AfterEffects</p>
-                                <img src="video-logos/aftereffects.png" alt="html" />
-                            </div>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>Illustrator</p>
-                                <img src="video-logos/illustrator.png" alt="html" />
-                            </div>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>PhotoShop</p>
-                                <img src="video-logos/aftereffects.png" alt="html" />
-                            </div>
-
-                        </div>
-
-
-
-
-                    <div className={`${styles.cards} `}>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>HTML5</p>
-                                <img src="tech-logos/html.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="1">
-                                <p>CSS3</p>
-                                <img src="tech-logos/css.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="2">
-                                <p>JavaScript</p>
-                                <img
-                                    src="tech-logos/javascript.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="3">
-                                <p>TypeScript</p>
-                                <img
-                                    src="tech-logos/typescript.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="4">
-                                <p>React.js</p>
-                                <img src="tech-logos/react.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="5">
-                                <p>Next.js</p>
-                                <img src="tech-logos/nextjs.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="6">
-                                <p>CSS-in-JS</p>
-                                <img
-                                    src="tech-logos/styledcomponents.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="7">
-                                <p>Material UI</p>
-                                <img
-                                    src="tech-logos/materialui.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="8">
-                                <p>Tailwind CSS</p>
-                                <img
-                                    src="tech-logos/tailwindcss.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="11">
-                                <p>Redux</p>
-                                <img src="tech-logos/redux.svg" alt="html" />
-                            </div>
-                            <div className={`${styles["box-tech"]} `} key="15">
-                                <p>Storybook</p>
-                                <img
-                                    src="tech-logos/storybook.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="16">
-                                <p>SASS</p>
-                                <img src="tech-logos/sass.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="17">
-                                <p>Figma</p>
-                                <img src="tech-logos/figma.svg" alt="html" />
-                            </div>
-                        </div>
-                    <div className="relative w-full">
+                    <div className="relative">
                         <AnimatedBanner />
                         <div className="box">
                             <div></div>
@@ -223,8 +125,110 @@ const Home = () => {
                         </div>
                     </div>
 
+                    <div
+                        className={`${styles.cards} mb-4 mt-4 ${
+                            styles[themeState === "light" ? "light" : "dark"]
+                        } ${styles["video-logos"]}`}
+                    >
+                        <div className={`${styles["box-tech"]} `} key="0">
+                            <p>Premiere</p>
+                            <img src="video-logos/premiere.png" alt="html" />
+                        </div>
+                        <div className={`${styles["box-tech"]} `} key="0">
+                            <p>AfterEffects</p>
+                            <img
+                                src="video-logos/aftereffects.png"
+                                alt="html"
+                            />
+                        </div>
+                        <div className={`${styles["box-tech"]} `} key="0">
+                            <p>Illustrator</p>
+                            <img src="video-logos/illustrator.png" alt="html" />
+                        </div>
+                        <div className={`${styles["box-tech"]} `} key="0">
+                            <p>PhotoShop</p>
+                            <img
+                                src="video-logos/aftereffects.png"
+                                alt="html"
+                            />
+                        </div>
+                    </div>
+
+                    <div
+                        className={`${styles.cards} ${
+                            styles[themeState === "light" ? "light" : "dark"]
+                        } mb-4 mt-4`}
+                    >
+                        <div className={`${styles["box-tech"]} `} key="0">
+                            <p>HTML5</p>
+                            <img src="tech-logos/html.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="1">
+                            <p>CSS3</p>
+                            <img src="tech-logos/css.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="2">
+                            <p>JavaScript</p>
+                            <img src="tech-logos/javascript.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="3">
+                            <p>TypeScript</p>
+                            <img src="tech-logos/typescript.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="4">
+                            <p>React.js</p>
+                            <img src="tech-logos/react.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="5">
+                            <p>Next.js</p>
+                            <img src="tech-logos/nextjs.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="6">
+                            <p>CSS-in-JS</p>
+                            <img
+                                src="tech-logos/styledcomponents.svg"
+                                alt="html"
+                            />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="7">
+                            <p>Material UI</p>
+                            <img src="tech-logos/materialui.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="8">
+                            <p>Tailwind CSS</p>
+                            <img src="tech-logos/tailwindcss.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="11">
+                            <p>Redux</p>
+                            <img src="tech-logos/redux.svg" alt="html" />
+                        </div>
+                        <div className={`${styles["box-tech"]} `} key="15">
+                            <p>Storybook</p>
+                            <img src="tech-logos/storybook.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="16">
+                            <p>SASS</p>
+                            <img src="tech-logos/sass.svg" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="17">
+                            <p>Figma</p>
+                            <img src="tech-logos/figma.svg" alt="html" />
+                        </div>
+                    </div>
+
                     <AccordionItem
-                        id="1"
+                        id="2"
                         title="Project description"
                         activeElement={"true"}
                         handleClick={function (id: string): void {}}
@@ -245,7 +249,7 @@ const Home = () => {
                         <CarouselTransition />
                     </div>
                     <AccordionItem
-                        id="2"
+                        id="3"
                         title="Video editing and motion graphics portfolio"
                         activeElement={null}
                         handleClick={function (id: string): void {}}
@@ -392,7 +396,7 @@ const Home = () => {
                         </div>
                     </AccordionItem>
                     <AccordionItem
-                        id="3"
+                        id="4"
                         title="Portfolio of projects"
                         activeElement={"true"}
                         handleClick={function (id: string): void {}}
@@ -446,8 +450,6 @@ const Home = () => {
                                 <div></div>
                             </div>
                         </Card>
-
- 
 
                         <Link
                             href="/ticket-app"
