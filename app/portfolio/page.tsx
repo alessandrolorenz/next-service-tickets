@@ -1,9 +1,6 @@
 "use client"
-
 import React from "react"
-import styles from "./homepage.module.css"
-import AccordionBasicExample from "@/components/Accordions"
-import AccordionItem from "@/components/AccordionItem"
+
 import {
     Card,
     CardContent,
@@ -12,66 +9,16 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import AccordionBasicExample from "@/components/Accordions"
+import AccordionItem from "@/components/AccordionItem"
 import CarouselTransition from "@/components/MyComponent"
 import Link from "next/link"
-import { useTheme } from "next-themes"
-import AnimatedBanner from "@/components/AnimatedBanner"
 
-const Home = () => {
-    const { theme } = useTheme() // Usa o hook useTheme para obter o tema ativo
+const Portfolio = () => {
     return (
-        <div>
-            <section
-                className={`${styles.section} ${styles["main-banner"]}`}
-                id={styles.top}
-                data-section="section1"
-            >
-                <video
-                    id={`${styles["bg-video"]}`}
-                    width="320"
-                    height="240"
-                    controls
-                    preload="none"
-                    autoPlay
-                    muted
-                >
-                    <source src="portfolio.mp4" type="video/mp4" />
-                    <track
-                        src="/path/to/captions.vtt"
-                        kind="subtitles"
-                        srcLang="en"
-                        label="English"
-                    />
-                    Your browser does not support the video tag.
-                </video>
-
-                <div
-                    className={`${styles["video-overlay"]} ${
-                        styles["header-text"]
-                    } ${styles[theme === "light" ? "light" : "dark"]}`}
-                >
-                    <div className={styles.caption}>
-                        <CardTitle className="uppercase">
-                            FRONT END - HTML/CSS JAVASCRIPT - Video Editing and
-                            Motion Graphics
-                        </CardTitle>
-                        <h2>
-                            <em>ALESSANDRO</em> LORENZ
-                        </h2>
-                        <div className={`${styles["main-button"]} `}>
-                            <div className={`${styles["scroll-to-section"]} `}>
-                                <a href="https://github.com/alessandrolorenz">
-                                    GITHUB PROFILE
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
+        <div className=" w-full">
                 <AccordionBasicExample defaultOpenId={["1", "3"]}>
-                    <AccordionItem
+                <AccordionItem
                         id="1"
                         title="Project description"
                         activeElement={"true"}
@@ -97,147 +44,6 @@ const Home = () => {
                                 editing has enhanced my understanding of visual
                                 elements and user experience in my current role
                                 as a Front End Developer.
-                            </CardContent>
-                        </Card>
-                    </AccordionItem>
-
-                    <div className={`${styles.cards} `}>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>Premiere</p>
-                                <img src="video-logos/premiere.png" alt="html" />
-                            </div>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>AfterEffects</p>
-                                <img src="video-logos/aftereffects.png" alt="html" />
-                            </div>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>Illustrator</p>
-                                <img src="video-logos/illustrator.png" alt="html" />
-                            </div>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>PhotoShop</p>
-                                <img src="video-logos/aftereffects.png" alt="html" />
-                            </div>
-
-                        </div>
-
-
-
-
-                    <div className={`${styles.cards} `}>
-                            <div className={`${styles["box-tech"]} `} key="0">
-                                <p>HTML5</p>
-                                <img src="tech-logos/html.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="1">
-                                <p>CSS3</p>
-                                <img src="tech-logos/css.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="2">
-                                <p>JavaScript</p>
-                                <img
-                                    src="tech-logos/javascript.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="3">
-                                <p>TypeScript</p>
-                                <img
-                                    src="tech-logos/typescript.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="4">
-                                <p>React.js</p>
-                                <img src="tech-logos/react.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="5">
-                                <p>Next.js</p>
-                                <img src="tech-logos/nextjs.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="6">
-                                <p>CSS-in-JS</p>
-                                <img
-                                    src="tech-logos/styledcomponents.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="7">
-                                <p>Material UI</p>
-                                <img
-                                    src="tech-logos/materialui.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="8">
-                                <p>Tailwind CSS</p>
-                                <img
-                                    src="tech-logos/tailwindcss.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="11">
-                                <p>Redux</p>
-                                <img src="tech-logos/redux.svg" alt="html" />
-                            </div>
-                            <div className={`${styles["box-tech"]} `} key="15">
-                                <p>Storybook</p>
-                                <img
-                                    src="tech-logos/storybook.svg"
-                                    alt="html"
-                                />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="16">
-                                <p>SASS</p>
-                                <img src="tech-logos/sass.svg" alt="html" />
-                            </div>
-
-                            <div className={`${styles["box-tech"]} `} key="17">
-                                <p>Figma</p>
-                                <img src="tech-logos/figma.svg" alt="html" />
-                            </div>
-                        </div>
-                    <div className="relative w-full">
-                        <AnimatedBanner />
-                        <div className="box">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <AccordionItem
-                        id="1"
-                        title="Project description"
-                        activeElement={"true"}
-                        handleClick={function (id: string): void {}}
-                        isFirstChild={true}
-                        isLastChild={false}
-                    >
-                        <Card className="mx-0 lg:col-span-3 lg:mr-0 relative">
-                            <CardContent className="max-w-full prose dark:prose-invert  p-6">
-                                This website showcases my portfolio of videos
-                                created using Adobe AfterEffects, Illustrator,
-                                PhotoShop, and Premiere. I have also included a
-                                system I developed while undertaking a Next.js
-                                course.
                             </CardContent>
                         </Card>
                     </AccordionItem>
@@ -446,9 +252,6 @@ const Home = () => {
                                 <div></div>
                             </div>
                         </Card>
-
- 
-
                         <Link
                             href="/ticket-app"
                             className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3.5 px-7 rounded-lg bg-white text-blue-gray-900 shadow-md shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none gap-3 m-auto w-full block"
@@ -458,9 +261,8 @@ const Home = () => {
                         </Link>
                     </AccordionItem>
                 </AccordionBasicExample>
-            </section>
         </div>
     )
 }
 
-export default Home
+export default Portfolio

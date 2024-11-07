@@ -21,6 +21,30 @@
       display: none !important;
   }
   .section {}
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
+
+.cards .box-tech {
+    position: relative;
+    text-align: center;
+    background-color: #030712;
+    width: 12rem;
+    aspect-ratio: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
   
   .video-overlay {
       position: absolute;
