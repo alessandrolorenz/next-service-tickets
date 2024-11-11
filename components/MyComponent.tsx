@@ -14,12 +14,7 @@ import { Slidecard } from "./SlideCard"
 
 export function CarouselWithContent() {
     return (
-        <Carousel
-            className="rounded-xl"
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
-        >
+        <Carousel className="rounded-xl" placeholder={undefined}>
             <Slidecard
                 textCenter={true}
                 title={"MUNDO DA LEITURA NA TV"}
@@ -53,8 +48,7 @@ export function CarouselWithContent() {
                                     allowFullScreen
                                 ></iframe>
                             </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                            </CardFooter>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
                         </Card>
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
                             <CardHeader className="cards-portfolio-header p-3 sm:p-6">
@@ -75,8 +69,7 @@ export function CarouselWithContent() {
                                     allowFullScreen
                                 ></iframe>
                             </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                            </CardFooter>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
                         </Card>
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
                             <CardHeader className="cards-portfolio-header p-3 sm:p-6">
@@ -97,8 +90,7 @@ export function CarouselWithContent() {
                                     allowFullScreen
                                 ></iframe>
                             </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                            </CardFooter>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
                         </Card>
 
                         <Card className="cards-portfolio m-auto">
@@ -194,25 +186,139 @@ export function CarouselWithContent() {
                         <Card className="cards-portfolio m-auto">
                             <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
                                 <CardTitle className="portfolio-card-title text-lg">
-                                    Videos Adobe AfterEffects
+                                    Edição de vídeo
                                 </CardTitle>
                                 <CardDescription className="portfolio-card-description text-sm">
-                                    Institucional Alyaprime - Alyaprev
+                                    VT RESPONSABILIDADE SOCIAL 2015
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
                                 <iframe
                                     className="iframe-video"
-                                    src="https://www.youtube.com/embed/kNSwVQU8hd8"
-                                    title="Institucional Alyaprime - Alyaprev"
+                                    src="https://www.youtube.com/embed/st3rRRNCStQ"
+                                    title="VT RESPONSABILIDADE SOCIAL 2015"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Videos Adobe AfterEffects
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm">
+                                    Viceo Institucional UPFTV
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video"
+                                    src="https://www.youtube.com/embed/_NQjDoY1Xnk"
+                                    title="CLIP UPFTV INSTITUCIONAL 2017"
                                     frameBorder="0"
                                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerPolicy="strict-origin-when-cross-origin"
                                     allowFullScreen
                                 ></iframe>
                             </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                            </CardFooter>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Videos Adobe AfterEffects
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm">
+                                    Institucional Festival Internacional de
+                                    Folclore
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video"
+                                    src="https://www.youtube.com/embed/95WfsRcNznQ"
+                                    title="CLIP FESTIVAL INTERNACIONAL DE FOLCLORE 2016"
+                                    frameBorder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Videos Adobe AfterEffects
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm">
+                                    Wedding | Elisa + João Henrique | PF
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video"
+                                    src="https://www.youtube.com/embed/ZVyQ3nndLZ8"
+                                    title="Wedding | Elisa + João Henrique | PF"
+                                    frameBorder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Videos Adobe AfterEffects
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm">
+                                    Braussieleiro TV - Australia
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video"
+                                    src="https://www.youtube.com/embed/1iiC7IQeeSA"
+                                    title="EPISODIO FASHION"
+                                    frameBorder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Videos Adobe AfterEffects
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm">
+                                    AD RENATADELLAVECCHIA PRIMAVERA / VERAO 2014
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video"
+                                    src="https://www.youtube.com/embed/jH4jXYlqVuU"
+                                    title="AD RENATADELLAVECCHIA PRIM VERAO 2014"
+                                    frameBorder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
                         </Card>
                     </div>
                 </CustomDialog>
@@ -230,8 +336,6 @@ export function CarouselWithContent() {
                             color="white"
                             className="mb-4 text-3xl md:text-4xl lg:text-5xl"
                             placeholder={undefined}
-                            onPointerEnterCapture={undefined}
-                            onPointerLeaveCapture={undefined}
                         >
                             The Beauty of Nature
                         </Typography>
@@ -240,8 +344,6 @@ export function CarouselWithContent() {
                             color="white"
                             className="mb-12 opacity-80"
                             placeholder={undefined}
-                            onPointerEnterCapture={undefined}
-                            onPointerLeaveCapture={undefined}
                         >
                             It is not so much for its beauty that the forest
                             makes a claim upon men&apos;s hearts, as for that
@@ -254,8 +356,6 @@ export function CarouselWithContent() {
                                 size="lg"
                                 color="white"
                                 placeholder={undefined}
-                                onPointerEnterCapture={undefined}
-                                onPointerLeaveCapture={undefined}
                             >
                                 Explore
                             </Button>
@@ -264,8 +364,6 @@ export function CarouselWithContent() {
                                 color="white"
                                 variant="text"
                                 placeholder={undefined}
-                                onPointerEnterCapture={undefined}
-                                onPointerLeaveCapture={undefined}
                             >
                                 Gallery
                             </Button>

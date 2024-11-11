@@ -55,7 +55,7 @@ const AnimatedBanner = () => {
             <div className={`${styles.banner} m-auto`} ref={bannerRef}>
                 <img
                     src="video.svg"
-                    className={`${styles.imagem} ${styles.imagemm1}`}
+                    className={`${styles.imagem} ${styles.imagem1}`}
                     alt="Imagem 1"
                     ref={imagem1Ref}
                 />

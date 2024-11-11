@@ -108,50 +108,21 @@ const Home = () => {
                             </CardContent>
                         </Card>
                     </AccordionItem>
+                </AccordionBasicExample>
 
-                    <div className="relative">
-                        <AnimatedBanner />
-                        <div className="box">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div
-                        className={`${styles.cards} mb-4 mt-4 ${
-                            styles[themeState === "light" ? "light" : "dark"]
-                        } ${styles["video-logos"]}`}
-                    >
-                        <div className={`${styles["box-tech"]} `} key="0">
-                            <p>Premiere</p>
-                            <img src="video-logos/premiere.png" alt="html" />
-                        </div>
-                        <div className={`${styles["box-tech"]} `} key="0">
-                            <p>AfterEffects</p>
-                            <img
-                                src="video-logos/aftereffects.png"
-                                alt="html"
-                            />
-                        </div>
-                        <div className={`${styles["box-tech"]} `} key="0">
-                            <p>Illustrator</p>
-                            <img src="video-logos/illustrator.png" alt="html" />
-                        </div>
-                        <div className={`${styles["box-tech"]} `} key="0">
-                            <p>PhotoShop</p>
-                            <img
-                                src="video-logos/aftereffects.png"
-                                alt="html"
-                            />
-                        </div>
+                <div className="relative">
+                    <AnimatedBanner />
+                    <div className="box">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
 
                     <div
@@ -226,7 +197,37 @@ const Home = () => {
                             <img src="tech-logos/figma.svg" alt="html" />
                         </div>
                     </div>
+                    <div
+                        className={`${styles.cards} mb-8 mt-4 ${
+                            styles[themeState === "light" ? "light" : "dark"]
+                        } ${styles["video-logos"]}`}
+                    >
+                        <div className={`${styles["box-tech"]} `} key="video-0">
+                            <p>Premiere</p>
+                            <img src="video-logos/premiere.png" alt="html" />
+                        </div>
+                        <div className={`${styles["box-tech"]} `} key="video-1">
+                            <p>AfterEffects</p>
+                            <img
+                                src="video-logos/aftereffects.png"
+                                alt="html"
+                            />
+                        </div>
+                        <div className={`${styles["box-tech"]} `} key="video-2">
+                            <p>Illustrator</p>
+                            <img src="video-logos/illustrator.png" alt="html" />
+                        </div>
+                        <div className={`${styles["box-tech"]} `} key="video-3">
+                            <p>PhotoShop</p>
+                            <img
+                                src="video-logos/aftereffects.png"
+                                alt="html"
+                            />
+                        </div>
+                    </div>
+                </div>
 
+                <AccordionBasicExample defaultOpenId={["2"]}>
                     <AccordionItem
                         id="2"
                         title="Project description"
@@ -245,9 +246,13 @@ const Home = () => {
                             </CardContent>
                         </Card>
                     </AccordionItem>
-                    <div className="mt-8 mb-8">
-                        <CarouselTransition />
-                    </div>
+                </AccordionBasicExample>
+
+                <div className="mt-8 mb-8">
+                    <CarouselTransition />
+                </div>
+
+                <AccordionBasicExample>
                     <AccordionItem
                         id="3"
                         title="Video editing and motion graphics portfolio"

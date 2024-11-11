@@ -159,6 +159,7 @@
   }
 
   .video-logos.cards .box-tech img {
-    max-width: 85%;
+    max-width: 75%;
+    width: 40%;;
   }
 }

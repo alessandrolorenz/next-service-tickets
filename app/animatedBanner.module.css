@@ -15,7 +15,9 @@
   transition: clip-path 0.1s ease;
 }
 
-.imagem1 {}
+.imagem1 {
+  clip-path: inset(0 50% 0% 0)
+}
 
 .imagem2 {
   clip-path: inset(0 0 0 50%);
