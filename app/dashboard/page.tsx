@@ -52,6 +52,14 @@ const Dashboard = async () => {
     return (
         <div>
             <div className=" w-full">
+            <div className="grid gap-4 md:grid-cols-2 px-2 mt-6">
+                <div>
+                    <DashRecentTickets tickets={tickets} />
+                </div>
+                <div>
+                    <DashChart data={data} />
+                </div>
+            </div>
                 <div className="grid gap-4 md:grid-cols-1 px-2 mt-8">
                     <div>
                         <Card className="mx-0 mb-4 lg:col-span-3 lg:mr-0">
@@ -86,14 +94,7 @@ const Dashboard = async () => {
                     </div>
                 </div>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 px-2 mt-6">
-                <div>
-                    <DashRecentTickets tickets={tickets} />
-                </div>
-                <div>
-                    <DashChart data={data} />
-                </div>
-            </div>
+
         </div>
     )
 }

@@ -17,11 +17,11 @@ const AccordionBasicExample = ({ children, defaultOpenId }: AccordionBasicExampl
             }
         });
     };
-
     return (
         <div id="accordionExample" className="mt-10 mb-10">
-            {React.Children.map(children, (child: any) =>
+            {React.Children.map(children, (child: any, index) =>
                 React.cloneElement(child, {
+                    key: child.key || `accordion-item-${index}`, // Adiciona uma chave única
                     activeElement,
                     handleClick,
                 })
