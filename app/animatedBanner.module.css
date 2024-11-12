@@ -21,7 +21,6 @@
 
 .imagem2 {
   clip-path: inset(0 0 0 50%);
-  /* mostra metade direita inicialmente */
 }
 
 @media (min-width: 768px) {

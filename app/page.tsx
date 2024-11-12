@@ -178,13 +178,21 @@ const Home = () => {
                             isFirstChild={true}
                             isLastChild={false}
                         >
-                            <Card className="mx-0 lg:col-span-3 lg:mr-0 relative">
-                                <CardContent className="max-w-full prose dark:prose-invert  p-6">
+                            <Card className="mx-0 lg:col-span-3 lg:mr-0 relative p-6">
+                                <CardContent className="max-w-full prose dark:prose-invert  p-0 pt-2">
                                     This website showcases my portfolio of
                                     videos created using Adobe AfterEffects,
-                                    Illustrator, PhotoShop, and Premiere. I have
-                                    also included a system I developed while
-                                    undertaking a Next.js course.
+                                    Illustrator, PhotoShop, and Premiere.
+                                </CardContent>
+                                <CardContent className="max-w-full prose dark:prose-invert  p-0 pt-2">
+                                    I used a stack
+                                    comprising Typescript, ReactJs, NextJs, CSS
+                                    modules, Tailwind, Prisma, and CI/CD with
+                                    Vercel. The homepage, designed with CSS modules,
+                                    employs a best practice to isolate styles
+                                    effectively and Iused some
+                                    https://ui.shadcn.com/ components to speed up
+                                    the development process.
                                 </CardContent>
                             </Card>
                             <AnimatedBanner />
@@ -379,16 +387,7 @@ const Home = () => {
                                 technologies and the endless possibilities they
                                 offer to make the world a better place.
                             </CardContent>
-                            <CardContent className="max-w-full prose dark:prose-invert mt-4">
-                                This project was developed using a stack
-                                comprising Typescript, ReactJs, NextJs, CSS
-                                modules, Tailwind, Prisma, and CI/CD with
-                                Vercel. The homepage, designed with CSS modules,
-                                employs a best practice to isolate styles
-                                effectively and Iused some
-                                https://ui.shadcn.com/ components to speed up
-                                the development process.
-                            </CardContent>
+                    
                             <CardFooter>
                                 Also included is a system I developed while
                                 undertaking a Next.js course. This system serves

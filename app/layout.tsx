@@ -28,7 +28,7 @@ export default async function RootLayout({
                 enableSystem
                 disableTransitionOnChange
             >
-                <body className={inter.className}>
+                <body className={`${inter.className} flex flex-col h-screen`}>
                     <nav className="flex flex-col items-center border-b px-5 py-3">
                         <div className="max-w-6xl w-full">
                             <MainNav session={session} />
@@ -37,10 +37,9 @@ export default async function RootLayout({
                     <main className="flex flex-col items-center">
                         <div className=" w-full">{children}</div>
                     </main>
-                    <footer className="flex items-center justify-end w-full h-24 border-t">
-                        <code className="text-sm bg-black p-2 mr-10 text-lg sm:text-sm">
-                            {new Date().getDay()}/{new Date().getMonth()}/
-                            {new Date().getFullYear()} - Alessandro Lorenz
+                    <footer className="flex items-center justify-end w-full h-24 border-t bottom-0 mt-auto">
+                        <code className="text-sm p-2 mr-10 text-lg sm:text-sm">
+                            Alessandro Lorenz
                         </code>
                     </footer>
                 </body>
