@@ -172,7 +172,7 @@ const Home = () => {
                     <AccordionBasicExample defaultOpenId={["2"]}>
                         <AccordionItem
                             id="2"
-                            title="Project description"
+                            title="Description"
                             activeElement={"true"}
                             handleClick={function (id: string): void {}}
                             isFirstChild={true}
@@ -233,7 +233,7 @@ const Home = () => {
                                         After Effects Portfolio
                                     </CardTitle>
                                     <CardDescription className="portfolio-card-description text-sm  p-3">
-                                        Demo Reel
+                                        
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
@@ -246,15 +246,15 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">Demo Reel <small>Rock&apos; Roll - Led Zeppelin</small></CardFooter>
                             </Card>
-                            <Card className="cards-portfolio m-auto">
+                            <Card className="cards-portfolio m-auto w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
                                         Videos Adobe AfterEffects
                                     </CardTitle>
                                     <CardDescription className="portfolio-card-description text-sm">
-                                        Vinheta Rádio UPF
+                                   
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
@@ -267,16 +267,16 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm"></CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm"> Stinger Rádio UPF</CardFooter>
                             </Card>
 
-                            <Card className="cards-portfolio m-auto">
+                            <Card className="cards-portfolio m-auto  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
                                         Videos Adobe AfterEffects
                                     </CardTitle>
                                     <CardDescription className="portfolio-card-description text-sm">
-                                        VT UPF Idiomas
+                                        
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
@@ -290,15 +290,15 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm"></CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">Promo UPF Idiomas</CardFooter>
                             </Card>
-                            <Card className="cards-portfolio m-auto">
+                            <Card className="cards-portfolio m-auto  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
                                         Videos Adobe AfterEffects
                                     </CardTitle>
                                     <CardDescription className="portfolio-card-description text-sm">
-                                        Chamada Hora da Notícia
+                                        
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
@@ -311,16 +311,16 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm"></CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">Promo Hora da Notícia</CardFooter>
                             </Card>
 
-                            <Card className="cards-portfolio m-auto">
+                            <Card className="cards-portfolio m-auto  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
                                         Videos Adobe AfterEffects
                                     </CardTitle>
                                     <CardDescription className="portfolio-card-description text-sm">
-                                        Videos criados
+                                      
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
@@ -335,17 +335,17 @@ const Home = () => {
                                     ></iframe>
                                 </CardContent>
                                 <CardFooter className="portfolio-card-footer text-sm">
-                                    Updated:{" "}
+                                Promo Facebook UPFTV
                                 </CardFooter>
                             </Card>
 
-                            <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
                                         Videos Adobe AfterEffects
                                     </CardTitle>
                                     <CardDescription className="portfolio-card-description text-sm">
-                                        Videos criados
+                                        
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
@@ -360,14 +360,14 @@ const Home = () => {
                                     ></iframe>
                                 </CardContent>
                                 <CardFooter className="portfolio-card-footer text-sm">
-                                    Updated:{" "}
+                                Institutional Alyaprime
                                 </CardFooter>
                             </Card>
                         </div>
                     </AccordionItem>
                     <AccordionItem
                         id="4"
-                        title="Portfolio of projects"
+                        title="Dev Projects"
                         activeElement={"true"}
                         handleClick={function (id: string): void {}}
                         isFirstChild={false}
@@ -389,7 +389,7 @@ const Home = () => {
                             </CardContent>
                     
                             <CardFooter>
-                                Also included is a system I developed while
+                                In this project, I also included is a system I developed while
                                 undertaking a Next.js course. This system serves
                                 as a Ticket Services platform, enabling the
                                 creation of tickets or tasks related to ongoing

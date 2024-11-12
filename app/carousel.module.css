@@ -1,0 +1,17 @@
+.carousel {
+
+}
+
+.carousel.light > button {
+  background-color: gray;
+};
+
+.light {
+
+}
+
+@media (min-width: 768px) {
+  .carousel {
+
+  }
+}
