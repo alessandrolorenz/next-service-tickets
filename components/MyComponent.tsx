@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card"
 import { Slidecard } from "./SlideCard"
 import styles from "../app/carousel.module.css"
+import Slidecard1 from "./SlideCard1"
 
 export function CarouselWithContent() {
     const { theme } = useTheme() // Usa o hook useTheme para obter o tema ativo
@@ -42,7 +43,7 @@ export function CarouselWithContent() {
                 <CustomDialog
                     title="Video Editing"
                     buttonTitle={"explore"}
-                    content="Examples of some of the videos"
+                    content="Examples of some of my videos"
                 >
                     <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto ">
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
@@ -166,7 +167,7 @@ export function CarouselWithContent() {
                 <CustomDialog
                     title="Video Editing"
                     buttonTitle={"explore"}
-                    content="Examples of some of the videos"
+                    content="Examples of some of my videos"
                 >
                     <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto">
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
@@ -331,54 +332,205 @@ export function CarouselWithContent() {
                     </div>
                 </CustomDialog>
             </Slidecard>
-            <div className="relative h-full w-full">
-                <img
-                    src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-                    alt="image 3"
-                    className="h-screen w-full object-cover"
-                />
-                <div className="absolute inset-0 grid h-full w-full items-end bg-black/75">
-                    <div className="w-3/4 pl-12 pb-12 md:w-2/4 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32">
-                        <Typography
-                            variant="h1"
-                            color="white"
-                            className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-                            placeholder={undefined}
-                        >
-                            The Beauty of Nature
-                        </Typography>
-                        <Typography
-                            variant="lead"
-                            color="white"
-                            className="mb-12 opacity-80"
-                            placeholder={undefined}
-                        >
-                            It is not so much for its beauty that the forest
-                            makes a claim upon men&apos;s hearts, as for that
-                            subtle something, that quality of air that emanation
-                            from old trees, that so wonderfully changes and
-                            renews a weary spirit.
-                        </Typography>
-                        <div className="flex gap-2">
-                            <Button
-                                size="lg"
-                                color={"white"}
-                                placeholder={undefined}
-                            >
-                                Explore
-                            </Button>
-                            <Button
-                                size="lg"
-                                color="white"
-                                variant="text"
-                                placeholder={undefined}
-                            >
-                                Gallery
-                            </Button>
-                        </div>
+            <Slidecard1
+                title={"Music and Hobbies"}
+                description={
+                    "It is not so much for its beauty that the forest makes a claim upon men&apos;s hearts, as for that subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a weary spirit."
+                }
+                image={""}
+            >
+                <CustomDialog
+                    title="Miscellaneous"
+                    buttonTitle={"explore"}
+                    content="Examples of some of my videos"
+                >
+                    <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto ">
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Rafa Sucesso e Outros Maias
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
+                                    Banda tributo ao Tim Maia em que fui
+                                    baterista e me diverti horrores.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video m-auto"
+                                    src="https://www.youtube.com/embed/6kr2cSe4-IU"
+                                    title="Tibuto a Tim Maia"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                                Bom senso - Tim Maia
+                            </CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Rafa Sucesso e Outros Maias
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
+                                    Mais uma musiquinha pra animar o coração
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video m-auto"
+                                    src="https://www.youtube.com/embed/VG69-y3QaDM"
+                                    title="Tibuto a Tim Maia 03"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                                Acenda o Farol - Tim Maia
+                            </CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Banda Rabo de Peixe
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
+                                    Banda da qual eu era fã e acabei me tornando
+                                    membro. Juntos gravamos um belo álbum
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video m-auto"
+                                    src="https://www.youtube.com/embed/WryRze_6Kf4"
+                                    title='Rabo de Peixe "Faça o que eu digo, não faça o que eu faço"'
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                                Rabo de Peixe - &quot;Faça o que eu digo, não
+                                faça o que eu faço&quot;
+                            </CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto w-full">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Banda Switchblades - Sydney / Austrália
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm">
+                                    Banda com a qual toquei no tempo do meu
+                                    intercâmbio na Áustralia.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
+                                <iframe
+                                    className="iframe-video"
+                                    src="https://www.youtube.com/embed/qrvl2P-7uQA"
+                                    title="switchblades"
+                                    frameBorder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                                Fun and Shit - Switchblades <br></br>
+                                Gravamos algumas musicas, fizemos algumas
+                                aoresentações e nos divertimos muito.
+                            </CardFooter>
+                        </Card>
+                        <Card className="cards-portfolio m-auto w-full">
+                            <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Banda Mausoléu - Passo Fundo
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm">
+                                    Banda da minha adolescência que tocava metal
+                                    (e o terror) na década de 90.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
+                                <iframe
+                                    className="iframe-video"
+                                    src="https://www.youtube.com/embed/FGAh17xn7qg"
+                                    title="BANDA MAUSOLEU"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm p-3 sm:p-6">
+                                Poder, sexo e violênia - Musica granhadora da
+                                eliminatória de Passo Fundo do Circuito de cock
+                                de 1996. Eu tinha 15 anos aninhos.
+                            </CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Tutorial Tello & Scratch - Tutorial de
+                                    programação com o Scratch para controlar o
+                                    drone Ryze Tello
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
+                                    Gosto muito de drones e fiz este tutorial
+                                    para fins de teste e passa-tempo.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video m-auto"
+                                    src="https://www.youtube.com/embed/_whcMD3uw7s"
+                                    title="Tutorial Tello &amp; Scratch - Tutorial de programação com o Scratch para controlar o drone Ryze Tello"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                                Tutorial Tello &amp; Scratch - Tutorial de
+                                programação com o Scratch para controlar o drone
+                                Ryze Tello
+                            </CardFooter>
+                        </Card>
+
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Minha experiência no Dinneer.com
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm  p-3">
+                                    Video com um casal de amigos para a uma
+                                    promo da dinner.com. Quem não gosta de uma
+                                    boa comida e uma boa compania?
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video m-auto"
+                                    src="https://www.youtube.com/embed/iZJ2oXYS5yQ"
+                                    title="Minha experiência no Dinneer.com"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                                Galinhada com trilha sonora de Roudini e Os
+                                Impostores
+                            </CardFooter>
+                        </Card>
                     </div>
-                </div>
-            </div>
+                </CustomDialog>
+            </Slidecard1>
         </Carousel>
     )
 }
