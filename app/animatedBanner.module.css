@@ -5,27 +5,33 @@
   overflow: hidden;
 }
 
-.imagem {
+.imagem,
+.imagem1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 70%;
   height: 100%;
   object-fit: cover;
   transition: clip-path 0.1s ease;
+  object-fit: contain;
 }
 
 .imagem1 {
-  clip-path: inset(0 50% 0% 0)
+  clip-path: inset(0 50% 0% 0);
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 .imagem2 {
   clip-path: inset(0 0 0 50%);
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 @media (min-width: 768px) {
   .banner {
-    width: 40vw;
+    width: 90vw;
     height: 40vw;
   }
 }

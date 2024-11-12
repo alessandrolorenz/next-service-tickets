@@ -185,14 +185,13 @@ const Home = () => {
                                     Illustrator, PhotoShop, and Premiere.
                                 </CardContent>
                                 <CardContent className="max-w-full prose dark:prose-invert  p-0 pt-2">
-                                    I used a stack
-                                    comprising Typescript, ReactJs, NextJs, CSS
-                                    modules, Tailwind, Prisma, and CI/CD with
-                                    Vercel. The homepage, designed with CSS modules,
-                                    employs a best practice to isolate styles
-                                    effectively and Iused some
-                                    https://ui.shadcn.com/ components to speed up
-                                    the development process.
+                                    I used a stack comprising Typescript,
+                                    ReactJs, NextJs, CSS modules, Tailwind,
+                                    Prisma, and CI/CD with Vercel. The homepage,
+                                    designed with CSS modules, employs a best
+                                    practice to isolate styles effectively and
+                                    Iused some https://ui.shadcn.com/ components
+                                    to speed up the development process.
                                 </CardContent>
                             </Card>
                             <AnimatedBanner />
@@ -230,11 +229,9 @@ const Home = () => {
                             <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
                                 <CardHeader className="cards-portfolio-header p-3 sm:p-6">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        After Effects Portfolio
+                                        Portfolio
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm  p-3">
-                                        
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm  p-3"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
                                     <iframe
@@ -246,16 +243,19 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">Demo Reel <small>Rock&apos; Roll - Led Zeppelin</small></CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                                    Demo Reel{" "}
+                                    <small>
+                                        Rock&apos; Roll - Led Zeppelin
+                                    </small>
+                                </CardFooter>
                             </Card>
                             <Card className="cards-portfolio m-auto w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                   
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -267,17 +267,18 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm"> Stinger Rádio UPF</CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    {" "}
+                                    Stinger Rádio UPF
+                                </CardFooter>
                             </Card>
 
                             <Card className="cards-portfolio m-auto  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                        
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -290,16 +291,16 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm">Promo UPF Idiomas</CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    Promo UPF Idiomas
+                                </CardFooter>
                             </Card>
                             <Card className="cards-portfolio m-auto  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                        
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -311,17 +312,17 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm">Promo Hora da Notícia</CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    Promo Hora da Notícia
+                                </CardFooter>
                             </Card>
 
                             <Card className="cards-portfolio m-auto  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                      
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -335,18 +336,16 @@ const Home = () => {
                                     ></iframe>
                                 </CardContent>
                                 <CardFooter className="portfolio-card-footer text-sm">
-                                Promo Facebook UPFTV
+                                    Promo Facebook UPFTV
                                 </CardFooter>
                             </Card>
 
                             <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                        
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -360,7 +359,7 @@ const Home = () => {
                                     ></iframe>
                                 </CardContent>
                                 <CardFooter className="portfolio-card-footer text-sm">
-                                Institutional Alyaprime
+                                    Institutional Alyaprime
                                 </CardFooter>
                             </Card>
                         </div>
@@ -387,16 +386,17 @@ const Home = () => {
                                 technologies and the endless possibilities they
                                 offer to make the world a better place.
                             </CardContent>
-                    
+
                             <CardFooter>
-                                In this project, I also included is a system I developed while
-                                undertaking a Next.js course. This system serves
-                                as a Ticket Services platform, enabling the
-                                creation of tickets or tasks related to ongoing
-                                project activities. A user can create, edit,
-                                delete, and mark as completed a ticket. It
-                                serves as my comprehensive to-do list, guiding
-                                the evolution of the system.
+                                In this project, I also included is a system I
+                                developed while undertaking a Next.js course.
+                                This system serves as a Ticket Services
+                                platform, enabling the creation of tickets or
+                                tasks related to ongoing project activities. A
+                                user can create, edit, delete, and mark as
+                                completed a ticket. It serves as my
+                                comprehensive to-do list, guiding the evolution
+                                of the system.
                             </CardFooter>
                             <div className="box">
                                 <div></div>
