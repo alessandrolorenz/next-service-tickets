@@ -1,6 +1,5 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, useEffect } from "react"
 
-import { Typography, Button } from "@material-tailwind/react"
 import styles from "../app/homepage.module.css"
 import { useTheme } from "next-themes"
 import { CardTitle } from "./ui/card"
@@ -15,6 +14,14 @@ interface slidecardProps {
 
 export function Slidecard(props: slidecardProps) {
     const { theme } = useTheme()
+    const [themeState, setThemeState] = React.useState("dark")
+
+    useEffect(() => {
+        if (theme) {
+            setThemeState(theme)
+        }
+    }, [theme])
+    
     return (
         <div className="relative h-full w-full">
             <img
@@ -26,7 +33,7 @@ export function Slidecard(props: slidecardProps) {
                 className={` absolute inset-0 grid h-full w-full items-center ${
                     props.textCenter ? "text-center" : ""
                 } bg-black/75 ${
-                    styles[theme === "light" ? "light-slide" : "dark-slide"]
+                    styles[themeState === "light" ? "light-slide" : "dark-slide"]
                 }`}
             >
                 <div

@@ -1,7 +1,7 @@
 .banner {
   position: relative;
-  width: 85vw;
-  height: 85vw;
+  width: 80vw;
+  height: 80vw;
   overflow: hidden;
 }
 
@@ -22,4 +22,11 @@
 .imagem2 {
   clip-path: inset(0 0 0 50%);
   /* mostra metade direita inicialmente */
+}
+
+@media (min-width: 768px) {
+  .banner {
+    width: 40vw;
+    height: 40vw;
+  }
 }

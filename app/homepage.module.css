@@ -34,7 +34,7 @@
   position: relative;
   text-align: center;
   background-color: #030712;
-  width: 9rem;
+  width: 5rem;
   aspect-ratio: 1;
   padding: 0;
   display: flex;
@@ -44,14 +44,18 @@
   border-top-left-radius: 2.5rem;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 10px;
 }
 
 .light.cards .box-tech {
   background-color: #dbe3fa;
 }
 
+.cards .box-tech img {
+  max-width: 55%;
+}
 .video-logos.cards .box-tech img {
-  max-width: 85%;
+  max-width: 55%;
 }
 
 .video-overlay {
@@ -155,7 +159,8 @@
   }
 
   .cards .box-tech {
-    width: 12rem;
+    width: 10rem;
+    font-size: 13px;
   }
 
   .video-logos.cards .box-tech img {

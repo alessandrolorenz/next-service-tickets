@@ -1,12 +1,20 @@
 "use client"
 
-import React, { useState, ReactNode, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import styles from "../app/homepage.module.css"
 import { CardTitle } from "@/components/ui/card"
 import { useTheme } from "next-themes"
 
 const BannerTop = (): JSX.Element => {
     const { theme } = useTheme()
+
+    const [themeState, setThemeState] = useState("dark")
+
+    useEffect(() => {
+        if (theme) {
+            setThemeState(theme)
+        }
+    }, [theme])
 
     return (
         <section
@@ -36,7 +44,7 @@ const BannerTop = (): JSX.Element => {
             <div
                 className={`${styles["video-overlay"]} ${
                     styles["header-text"]
-                } ${styles[theme === "light" ? "light" : "dark"]}`}
+                } ${styles[themeState === "light" ? "light" : "dark"]}`}
             >
                 <div className={styles.caption}>
                     <CardTitle className="uppercase">

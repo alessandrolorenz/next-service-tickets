@@ -16,6 +16,7 @@ import CarouselTransition from "@/components/MyComponent"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import AnimatedBanner from "@/components/AnimatedBanner"
+import BannerTop from "@/components/BannerTop"
 
 const Home = () => {
     const { theme } = useTheme() // Usa o hook useTheme para obter o tema ativo
@@ -29,102 +30,30 @@ const Home = () => {
 
     return (
         <div>
-            <section
-                className={`${styles.section} ${styles["main-banner"]}`}
-                id={styles.top}
-                data-section="section1"
-            >
-                <video
-                    id={`${styles["bg-video"]}`}
-                    width="320"
-                    height="240"
-                    controls
-                    preload="none"
-                    autoPlay
-                    muted
-                >
-                    <source src="portfolio.mp4" type="video/mp4" />
-                    <track
-                        src="/path/to/captions.vtt"
-                        kind="subtitles"
-                        srcLang="en"
-                        label="English"
-                    />
-                    Your browser does not support the video tag.
-                </video>
-
-                <div
-                    className={`${styles["video-overlay"]} ${
-                        styles["header-text"]
-                    } ${styles[themeState === "light" ? "light" : "dark"]}`}
-                >
-                    <div className={styles.caption}>
-                        <CardTitle className="uppercase">
-                            FRONT END - HTML/CSS JAVASCRIPT - Video Editing and
-                            Motion Graphics
-                        </CardTitle>
-                        <h2>
-                            <em>ALESSANDRO</em> LORENZ
-                        </h2>
-                        <div className={`${styles["main-button"]} `}>
-                            <div className={`${styles["scroll-to-section"]} `}>
-                                <a href="https://github.com/alessandrolorenz">
-                                    GITHUB PROFILE
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <BannerTop />
 
             <section>
-                <AccordionBasicExample defaultOpenId={["1"]}>
-                    <AccordionItem
-                        id="1"
-                        title="Project description"
-                        activeElement={"true"}
-                        handleClick={function (id: string): void {}}
-                        isFirstChild={true}
-                        isLastChild={false}
-                    >
-                        <Card className="mx-0 mb-4 lg:col-span-3 lg:mr-0 relative">
-                            <CardHeader>
-                                <CardTitle>Welcome</CardTitle>
-                                <CardDescription>
-                                    <b> Alessandro Cunha Lorenz</b> - Front End
-                                    Developer
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="max-w-full prose dark:prose-invert">
-                                I am a Front End Developer with a background in
-                                motion graphics and video editing. Before
-                                transitioning into a developer role, I gained
-                                valuable experience working as a motion graphics
-                                and video editor on an educational TV program.
-                                This background in motion graphics and video
-                                editing has enhanced my understanding of visual
-                                elements and user experience in my current role
-                                as a Front End Developer.
-                            </CardContent>
-                        </Card>
-                    </AccordionItem>
-                </AccordionBasicExample>
+                <Card className="m-4 mt-10 mb-10 lg:col-span-3 relative">
+                    <CardHeader>
+                        <CardTitle>Welcome</CardTitle>
+                        <CardDescription>
+                            <b> Alessandro Cunha Lorenz</b> - Front End
+                            Developer
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className="max-w-full prose dark:prose-invert">
+                        I am a Front End Developer with a background in motion
+                        graphics and video editing. Before transitioning into a
+                        developer role, I gained valuable experience working as
+                        a motion graphics and video editor on an educational TV
+                        program. This background in motion graphics and video
+                        editing has enhanced my understanding of visual elements
+                        and user experience in my current role as a Front End
+                        Developer.
+                    </CardContent>
+                </Card>
 
                 <div className="relative">
-                    <AnimatedBanner />
-                    <div className="box">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-
                     <div
                         className={`${styles.cards} ${
                             styles[themeState === "light" ? "light" : "dark"]
@@ -224,29 +153,57 @@ const Home = () => {
                                 alt="html"
                             />
                         </div>
+
+                        <div className={`${styles["box-tech"]} `} key="video-4">
+                            <p>FinalCut</p>
+                            <img src="video-logos/finalcut.png" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="video-5">
+                            <p>DaVinci Resolve</p>
+                            <img src="video-logos/davinci.png" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="video-6">
+                            <p>Blender</p>
+                            <img src="video-logos/blender.png" alt="html" />
+                        </div>
+                    </div>
+                    <AccordionBasicExample defaultOpenId={["2"]}>
+                        <AccordionItem
+                            id="2"
+                            title="Project description"
+                            activeElement={"true"}
+                            handleClick={function (id: string): void {}}
+                            isFirstChild={true}
+                            isLastChild={false}
+                        >
+                            <Card className="mx-0 lg:col-span-3 lg:mr-0 relative">
+                                <CardContent className="max-w-full prose dark:prose-invert  p-6">
+                                    This website showcases my portfolio of
+                                    videos created using Adobe AfterEffects,
+                                    Illustrator, PhotoShop, and Premiere. I have
+                                    also included a system I developed while
+                                    undertaking a Next.js course.
+                                </CardContent>
+                            </Card>
+                            <AnimatedBanner />
+                        </AccordionItem>
+                    </AccordionBasicExample>
+
+                    <div className="box">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
-
-                <AccordionBasicExample defaultOpenId={["2"]}>
-                    <AccordionItem
-                        id="2"
-                        title="Project description"
-                        activeElement={"true"}
-                        handleClick={function (id: string): void {}}
-                        isFirstChild={true}
-                        isLastChild={false}
-                    >
-                        <Card className="mx-0 lg:col-span-3 lg:mr-0 relative">
-                            <CardContent className="max-w-full prose dark:prose-invert  p-6">
-                                This website showcases my portfolio of videos
-                                created using Adobe AfterEffects, Illustrator,
-                                PhotoShop, and Premiere. I have also included a
-                                system I developed while undertaking a Next.js
-                                course.
-                            </CardContent>
-                        </Card>
-                    </AccordionItem>
-                </AccordionBasicExample>
 
                 <div className="mt-8 mb-8">
                     <CarouselTransition />
