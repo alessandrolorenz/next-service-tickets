@@ -16,6 +16,7 @@ import CarouselTransition from "@/components/MyComponent"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import AnimatedBanner from "@/components/AnimatedBanner"
+import BannerTop from "@/components/BannerTop"
 
 const Home = () => {
     const { theme } = useTheme() // Usa o hook useTheme para obter o tema ativo
@@ -29,102 +30,30 @@ const Home = () => {
 
     return (
         <div>
-            <section
-                className={`${styles.section} ${styles["main-banner"]}`}
-                id={styles.top}
-                data-section="section1"
-            >
-                <video
-                    id={`${styles["bg-video"]}`}
-                    width="320"
-                    height="240"
-                    controls
-                    preload="none"
-                    autoPlay
-                    muted
-                >
-                    <source src="portfolio.mp4" type="video/mp4" />
-                    <track
-                        src="/path/to/captions.vtt"
-                        kind="subtitles"
-                        srcLang="en"
-                        label="English"
-                    />
-                    Your browser does not support the video tag.
-                </video>
-
-                <div
-                    className={`${styles["video-overlay"]} ${
-                        styles["header-text"]
-                    } ${styles[themeState === "light" ? "light" : "dark"]}`}
-                >
-                    <div className={styles.caption}>
-                        <CardTitle className="uppercase">
-                            FRONT END - HTML/CSS JAVASCRIPT - Video Editing and
-                            Motion Graphics
-                        </CardTitle>
-                        <h2>
-                            <em>ALESSANDRO</em> LORENZ
-                        </h2>
-                        <div className={`${styles["main-button"]} `}>
-                            <div className={`${styles["scroll-to-section"]} `}>
-                                <a href="https://github.com/alessandrolorenz">
-                                    GITHUB PROFILE
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <BannerTop />
 
             <section>
-                <AccordionBasicExample defaultOpenId={["1"]}>
-                    <AccordionItem
-                        id="1"
-                        title="Project description"
-                        activeElement={"true"}
-                        handleClick={function (id: string): void {}}
-                        isFirstChild={true}
-                        isLastChild={false}
-                    >
-                        <Card className="mx-0 mb-4 lg:col-span-3 lg:mr-0 relative">
-                            <CardHeader>
-                                <CardTitle>Welcome</CardTitle>
-                                <CardDescription>
-                                    <b> Alessandro Cunha Lorenz</b> - Front End
-                                    Developer
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="max-w-full prose dark:prose-invert">
-                                I am a Front End Developer with a background in
-                                motion graphics and video editing. Before
-                                transitioning into a developer role, I gained
-                                valuable experience working as a motion graphics
-                                and video editor on an educational TV program.
-                                This background in motion graphics and video
-                                editing has enhanced my understanding of visual
-                                elements and user experience in my current role
-                                as a Front End Developer.
-                            </CardContent>
-                        </Card>
-                    </AccordionItem>
-                </AccordionBasicExample>
+                <Card className="m-4 mt-10 mb-10 lg:col-span-3 relative">
+                    <CardHeader>
+                        <CardTitle>Welcome</CardTitle>
+                        <CardDescription>
+                            <b> Alessandro Cunha Lorenz</b> - Front End
+                            Developer
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className="max-w-full prose dark:prose-invert">
+                        I am a Front End Developer with a background in motion
+                        graphics and video editing. Before transitioning into a
+                        developer role, I gained valuable experience working as
+                        a motion graphics and video editor on an educational TV
+                        program. This background in motion graphics and video
+                        editing has enhanced my understanding of visual elements
+                        and user experience in my current role as a Front End
+                        Developer.
+                    </CardContent>
+                </Card>
 
                 <div className="relative">
-                    <AnimatedBanner />
-                    <div className="box">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-
                     <div
                         className={`${styles.cards} ${
                             styles[themeState === "light" ? "light" : "dark"]
@@ -224,29 +153,64 @@ const Home = () => {
                                 alt="html"
                             />
                         </div>
+
+                        <div className={`${styles["box-tech"]} `} key="video-4">
+                            <p>FinalCut</p>
+                            <img src="video-logos/finalcut.png" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="video-5">
+                            <p>DaVinci Resolve</p>
+                            <img src="video-logos/davinci.png" alt="html" />
+                        </div>
+
+                        <div className={`${styles["box-tech"]} `} key="video-6">
+                            <p>Blender</p>
+                            <img src="video-logos/blender.png" alt="html" />
+                        </div>
+                    </div>
+                    <AccordionBasicExample defaultOpenId={["2"]}>
+                        <AccordionItem
+                            id="2"
+                            title="Description"
+                            activeElement={"true"}
+                            handleClick={function (id: string): void {}}
+                            isFirstChild={true}
+                            isLastChild={false}
+                        >
+                            <Card className="mx-0 lg:col-span-3 lg:mr-0 relative p-6">
+                                <CardContent className="max-w-full prose dark:prose-invert  p-0 pt-2">
+                                    This website showcases my portfolio of
+                                    videos created using Adobe AfterEffects,
+                                    Illustrator, PhotoShop, and Premiere.
+                                </CardContent>
+                                <CardContent className="max-w-full prose dark:prose-invert  p-0 pt-2">
+                                    I used a stack comprising Typescript,
+                                    ReactJs, NextJs, CSS modules, Tailwind,
+                                    Prisma, and CI/CD with Vercel. The homepage,
+                                    designed with CSS modules, employs a best
+                                    practice to isolate styles effectively and
+                                    Iused some https://ui.shadcn.com/ components
+                                    to speed up the development process.
+                                </CardContent>
+                            </Card>
+                            <AnimatedBanner />
+                        </AccordionItem>
+                    </AccordionBasicExample>
+
+                    <div className="box">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
-
-                <AccordionBasicExample defaultOpenId={["2"]}>
-                    <AccordionItem
-                        id="2"
-                        title="Project description"
-                        activeElement={"true"}
-                        handleClick={function (id: string): void {}}
-                        isFirstChild={true}
-                        isLastChild={false}
-                    >
-                        <Card className="mx-0 lg:col-span-3 lg:mr-0 relative">
-                            <CardContent className="max-w-full prose dark:prose-invert  p-6">
-                                This website showcases my portfolio of videos
-                                created using Adobe AfterEffects, Illustrator,
-                                PhotoShop, and Premiere. I have also included a
-                                system I developed while undertaking a Next.js
-                                course.
-                            </CardContent>
-                        </Card>
-                    </AccordionItem>
-                </AccordionBasicExample>
 
                 <div className="mt-8 mb-8">
                     <CarouselTransition />
@@ -265,11 +229,9 @@ const Home = () => {
                             <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
                                 <CardHeader className="cards-portfolio-header p-3 sm:p-6">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        After Effects Portfolio
+                                        Portfolio
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm  p-3">
-                                        Demo Reel
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm  p-3"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
                                     <iframe
@@ -281,16 +243,19 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6"></CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                                    Demo Reel{" "}
+                                    <small>
+                                        Rock&apos; Roll - Led Zeppelin
+                                    </small>
+                                </CardFooter>
                             </Card>
-                            <Card className="cards-portfolio m-auto">
+                            <Card className="cards-portfolio m-auto w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                        Vinheta Rádio UPF
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -302,17 +267,18 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm"></CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    {" "}
+                                    Stinger Rádio UPF
+                                </CardFooter>
                             </Card>
 
-                            <Card className="cards-portfolio m-auto">
+                            <Card className="cards-portfolio m-auto  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                        VT UPF Idiomas
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -325,16 +291,16 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm"></CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    Promo UPF Idiomas
+                                </CardFooter>
                             </Card>
-                            <Card className="cards-portfolio m-auto">
+                            <Card className="cards-portfolio m-auto  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                        Chamada Hora da Notícia
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -346,17 +312,17 @@ const Home = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </CardContent>
-                                <CardFooter className="portfolio-card-footer text-sm"></CardFooter>
+                                <CardFooter className="portfolio-card-footer text-sm">
+                                    Promo Hora da Notícia
+                                </CardFooter>
                             </Card>
 
-                            <Card className="cards-portfolio m-auto">
+                            <Card className="cards-portfolio m-auto  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                        Videos criados
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -370,18 +336,16 @@ const Home = () => {
                                     ></iframe>
                                 </CardContent>
                                 <CardFooter className="portfolio-card-footer text-sm">
-                                    Updated:{" "}
+                                    Promo Facebook UPFTV
                                 </CardFooter>
                             </Card>
 
-                            <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full">
                                 <CardHeader className="cards-portfolio-header">
                                     <CardTitle className="portfolio-card-title text-lg">
-                                        Videos Adobe AfterEffects
+                                        Video Editing and Motion
                                     </CardTitle>
-                                    <CardDescription className="portfolio-card-description text-sm">
-                                        Videos criados
-                                    </CardDescription>
+                                    <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                 </CardHeader>
                                 <CardContent className="card-content prose dark:prose-invert flex justify-center w-full max-w-full">
                                     <iframe
@@ -395,14 +359,14 @@ const Home = () => {
                                     ></iframe>
                                 </CardContent>
                                 <CardFooter className="portfolio-card-footer text-sm">
-                                    Updated:{" "}
+                                    Institutional Alyaprime
                                 </CardFooter>
                             </Card>
                         </div>
                     </AccordionItem>
                     <AccordionItem
                         id="4"
-                        title="Portfolio of projects"
+                        title="Dev Projects"
                         activeElement={"true"}
                         handleClick={function (id: string): void {}}
                         isFirstChild={false}
@@ -422,25 +386,17 @@ const Home = () => {
                                 technologies and the endless possibilities they
                                 offer to make the world a better place.
                             </CardContent>
-                            <CardContent className="max-w-full prose dark:prose-invert mt-4">
-                                This project was developed using a stack
-                                comprising Typescript, ReactJs, NextJs, CSS
-                                modules, Tailwind, Prisma, and CI/CD with
-                                Vercel. The homepage, designed with CSS modules,
-                                employs a best practice to isolate styles
-                                effectively and Iused some
-                                https://ui.shadcn.com/ components to speed up
-                                the development process.
-                            </CardContent>
+
                             <CardFooter>
-                                Also included is a system I developed while
-                                undertaking a Next.js course. This system serves
-                                as a Ticket Services platform, enabling the
-                                creation of tickets or tasks related to ongoing
-                                project activities. A user can create, edit,
-                                delete, and mark as completed a ticket. It
-                                serves as my comprehensive to-do list, guiding
-                                the evolution of the system.
+                                In this project, I also included is a system I
+                                developed while undertaking a Next.js course.
+                                This system serves as a Ticket Services
+                                platform, enabling the creation of tickets or
+                                tasks related to ongoing project activities. A
+                                user can create, edit, delete, and mark as
+                                completed a ticket. It serves as my
+                                comprehensive to-do list, guiding the evolution
+                                of the system.
                             </CardFooter>
                             <div className="box">
                                 <div></div>

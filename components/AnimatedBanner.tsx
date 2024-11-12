@@ -36,17 +36,33 @@ const AnimatedBanner = () => {
             }
         };
 
+        const handleTouchMove = (event: TouchEvent) => {
+            const touch = event.touches[0];
+            handleMouseMove({
+                clientX: touch.clientX,
+                clientY: touch.clientY,
+            } as MouseEvent);
+        };
+
         const handleMouseLeave = () => {
             imagem2.style.clipPath = 'inset(0 0 0 50%)';
             imagem1.style.clipPath = 'inset(0 50% 0 0)';
         };
 
+        const handleTouchEnd = () => {
+            handleMouseLeave();
+        };
+
         banner.addEventListener('mousemove', handleMouseMove);
         banner.addEventListener('mouseleave', handleMouseLeave);
+        banner.addEventListener('touchmove', handleTouchMove);
+        banner.addEventListener('touchend', handleTouchEnd);
 
         return () => {
             banner.removeEventListener('mousemove', handleMouseMove);
             banner.removeEventListener('mouseleave', handleMouseLeave);
+            banner.removeEventListener('touchmove', handleTouchMove);
+            banner.removeEventListener('touchend', handleTouchEnd);
         };
     }, []);
 
