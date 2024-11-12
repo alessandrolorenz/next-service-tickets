@@ -194,9 +194,9 @@ const Home = () => {
                                     to speed up the development process.
                                 </CardContent>
                             </Card>
-                            <AnimatedBanner />
                         </AccordionItem>
                     </AccordionBasicExample>
+                    <AnimatedBanner />
 
                     <div className="box">
                         <div></div>
