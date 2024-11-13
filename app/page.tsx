@@ -428,7 +428,7 @@ const Home = () => {
                         </div>
                     </AccordionItem>
                 </AccordionBasicExample>
-                <code
+                {/* <code
                     style={{
                         background: "midnightblue",
                         padding: "10px",
@@ -439,7 +439,7 @@ const Home = () => {
                 >
                     Swap Component - React: swipe or click to change the image
                 </code>
-                <AnimatedBanner />
+                <AnimatedBanner /> */}
             </section>
         </div>
     )
