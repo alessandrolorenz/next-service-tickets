@@ -17,6 +17,7 @@ import Image from "next/image"
 import AnimatedBanner from "@/components/AnimatedBanner"
 import BannerTop from "@/components/BannerTop"
 import Techs from "@/components/Techs"
+import { Moon, Sun, MonitorCheck } from "lucide-react"
 
 const Home = () => {
     return (
@@ -75,8 +76,6 @@ const Home = () => {
                             </Card>
                         </AccordionItem>
                     </AccordionBasicExample>
-
-                    <AnimatedBanner />
 
                     <div className="box">
                         <div></div>
@@ -319,6 +318,7 @@ const Home = () => {
                                         to-do list, guiding the evolution of the
                                         system.
                                     </CardFooter>
+                                    <MonitorCheck className="hover:cursor-pointer hover:text-primary" />
 
                                     <Link
                                         href="/ticket-app"
@@ -328,6 +328,7 @@ const Home = () => {
                                         Tickets App
                                     </Link>
                                 </Card>
+
                                 <Card className="cards-portfolio techs m-auto w-full">
                                     <CardHeader className="cards-portfolio-header">
                                         <CardTitle className="portfolio-card-title text-lg">
@@ -365,7 +366,7 @@ const Home = () => {
                                     <CardFooter>
                                         <code
                                             style={{
-                                                background: "gray",
+                                                background: "midnightblue",
                                                 padding: "10px",
                                             }}
                                         >
@@ -377,7 +378,7 @@ const Home = () => {
                                     <CardFooter>
                                         <code
                                             style={{
-                                                background: "gray",
+                                                background: "midnightblue",
                                                 padding: "10px",
                                             }}
                                         >
@@ -427,6 +428,18 @@ const Home = () => {
                         </div>
                     </AccordionItem>
                 </AccordionBasicExample>
+                <code
+                    style={{
+                        background: "midnightblue",
+                        padding: "10px",
+                        margin: "auto",
+                        display: "block",
+                        fontSize: "0.6rem",
+                    }}
+                >
+                    Swap Component - React: swipe or click to change the image
+                </code>
+                <AnimatedBanner />
             </section>
         </div>
     )
