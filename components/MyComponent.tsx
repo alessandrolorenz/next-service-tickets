@@ -1,5 +1,6 @@
 import React, { ReactNode, useEffect } from "react"
 import { useTheme } from "next-themes"
+import Link from "next/link"
 
 import { Carousel, Typography, Button } from "@material-tailwind/react"
 import CustomDialog from "./CustomDialog"
@@ -335,14 +336,14 @@ export function CarouselWithContent() {
             <Slidecard1
                 title={"Music and Hobbies"}
                 description={
-                    "It is not so much for its beauty that the forest makes a claim upon men&apos;s hearts, as for that subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a weary spirit."
+                    "Música, artes, esportes e hobbies. Aqui você encontra um pouco de tudo."
                 }
                 image={""}
             >
                 <CustomDialog
                     title="Miscellaneous"
                     buttonTitle={"explore"}
-                    content="Examples of some of my videos"
+                    content="Também sou baterista e tenho alguns hobbies. Aqui estão alguns exemplos."
                 >
                     <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto ">
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
@@ -399,10 +400,10 @@ export function CarouselWithContent() {
                                 <CardTitle className="portfolio-card-title text-lg">
                                     Banda Rabo de Peixe
                                 </CardTitle>
-                                <CardDescription className="portfolio-card-description text-sm  p-3">
-                                    Banda da qual eu era fã e acabei me tornando
-                                    membro. Juntos gravamos um belo álbum
-                                </CardDescription>
+                                {/* <CardDescription className="portfolio-card-description text-sm  p-3">
+                             
+                        
+                                </CardDescription> */}
                             </CardHeader>
                             <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
                                 <iframe
@@ -415,8 +416,13 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Rabo de Peixe - &quot;Faça o que eu digo, não
-                                faça o que eu faço&quot;
+                            <Link
+                                        href="https://open.spotify.com/intl-pt/artist/2P3ANfbebMUNUfDeTlcSGz"
+                                        className=" align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3.5 px-7 rounded-lg bg-white text-blue-gray-900 shadow-md shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none gap-3 m-4 mt-auto w-full block"
+                                        key="Rabo de peixe"
+                                    >
+                                        Álbum no Spotfy
+                                    </Link>
                             </CardFooter>
                         </Card>
 

@@ -299,13 +299,15 @@ const Home = () => {
                                         </CardTitle>
                                         <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                     </CardHeader>
-                                    <Image
+                                    {/* <Image
                                         className="m-auto mt-4 mb-4"
                                         src="/video-logos/aftereffects.png"
                                         alt="Next.js"
                                         width={150}
                                         height={150}
-                                    />
+                                    /> */}
+                                    <MonitorCheck className="hover:cursor-pointer hover:text-primary m-auto w-52 h-52" />
+
                                     <CardFooter>
                                         This project I developed while
                                         undertaking a Next.js course is a system
@@ -318,7 +320,6 @@ const Home = () => {
                                         to-do list, guiding the evolution of the
                                         system.
                                     </CardFooter>
-                                    <MonitorCheck className="hover:cursor-pointer hover:text-primary" />
 
                                     <Link
                                         href="/ticket-app"
