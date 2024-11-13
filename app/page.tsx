@@ -75,6 +75,7 @@ const Home = () => {
                             </Card>
                         </AccordionItem>
                     </AccordionBasicExample>
+
                     <AnimatedBanner />
 
                     <div className="box">
