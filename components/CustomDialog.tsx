@@ -40,7 +40,7 @@ export function CustomDialog(props: CustomDialogProps) {
                             {props.children}
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                        <AlertDialogCancel>Close</AlertDialogCancel>
+                        <AlertDialogCancel className="w-full block">Close</AlertDialogCancel>
                     </AlertDialogFooter>
                 </AlertDialogContent>
             </AlertDialog>
