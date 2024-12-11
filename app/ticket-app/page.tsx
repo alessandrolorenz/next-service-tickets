@@ -22,26 +22,29 @@ const PresentationApp = () => {
                                 comprising Typescript, ReactJs, NextJs, CSS
                                 modules, Tailwind, Prisma, and CI/CD with
                                 Vercel.
+                               
                             </CardTitle>
+                        </CardHeader>
+                        <CardContent className="max-w-full prose dark:prose-invert">
+                        It includes a CRUD system, and I have added a
+                            feature to allow the user to change the theme.The
+                            system is also integrated with NextAuth for
+                            authentication.
+                            <br />
+                            
+                            This system serves as a Ticket Services platform,
+                            enabling the creation of tickets or tasks related to
+                            ongoing project activities.
                             <CardDescription className="">
-                                The system is a Ticket Services platform,
-                                enabling the creation of tickets or tasks
-                                related to ongoing project activities. It serves
+                                 It serves
                                 as my comprehensive to-do list, guiding the
                                 evolution of the system.
                             </CardDescription>
-                        </CardHeader>
-                        <CardContent className="max-w-full prose dark:prose-invert">
-                            This system serves as a Ticket Services platform,
-                            enabling the creation of tickets or tasks related to
-                            ongoing project activities. It serves as my
-                            comprehensive to-do list, guiding the evolution of
-                            the system.
                         </CardContent>
                         <CardFooter>
                             Within the logged-in section, there is a simple
                             system I developed while undertaking a Next.js
-                            course.
+                            course. 
                         </CardFooter>
                     </Card>
                 </div>

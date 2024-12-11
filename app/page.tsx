@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from "react"
+import React from "react"
 import AccordionBasicExample from "@/components/Accordions"
 import AccordionItem from "@/components/AccordionItem"
 import {
@@ -17,7 +17,7 @@ import Image from "next/image"
 import AnimatedBanner from "@/components/AnimatedBanner"
 import BannerTop from "@/components/BannerTop"
 import Techs from "@/components/Techs"
-import { Moon, Sun, MonitorCheck } from "lucide-react"
+import { MonitorCheck } from "lucide-react"
 
 const Home = () => {
     return (
@@ -35,10 +35,7 @@ const Home = () => {
                     </CardHeader>
                     <CardContent className="max-w-full prose dark:prose-invert">
                         I am a Front End Developer with a background in motion
-                        graphics and video editing. Before transitioning into a
-                        developer role, I gained valuable experience working as
-                        a motion graphics and video editor on an educational TV
-                        program. This background in motion graphics and video
+                        graphics and video editing. The background in motion graphics and video
                         editing has enhanced my understanding of visual elements
                         and user experience in my current role as a Front End
                         Developer.
@@ -70,7 +67,7 @@ const Home = () => {
                                     Prisma, and CI/CD with Vercel. The homepage,
                                     designed with CSS modules, employs a best
                                     practice to isolate styles effectively and
-                                    Iused some https://ui.shadcn.com/ components
+                                    Iused some shadcn components
                                     to speed up the development process.
                                 </CardContent>
                             </Card>
@@ -129,13 +126,6 @@ const Home = () => {
                                         </CardTitle>
                                         <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                                     </CardHeader>
-                                    {/* <Image
-                                        className="m-auto mt-4 mb-4"
-                                        src="/video-logos/aftereffects.png"
-                                        alt="Next.js"
-                                        width={150}
-                                        height={150}
-                                    /> */}
                                     <MonitorCheck className="hover:cursor-pointer hover:text-primary m-auto w-52 h-52" />
 
                                     <CardFooter>

@@ -3,7 +3,6 @@
 import React, { ReactNode } from "react"
 import {
     AlertDialog,
-    AlertDialogAction,
     AlertDialogCancel,
     AlertDialogContent,
     AlertDialogDescription,
@@ -32,6 +31,7 @@ export function CustomDialog(props: CustomDialogProps) {
                 </AlertDialogTrigger>
 
                 <AlertDialogContent className="max-w-[97%] max-h-[90%] overflow-auto">
+                    <AlertDialogCancel className="ml-auto block h-6 pt-0">x</AlertDialogCancel>
                     <AlertDialogHeader>
                         <AlertDialogTitle>{props.title}</AlertDialogTitle>
                         <AlertDialogDescription>
