@@ -47,7 +47,7 @@ export function Slidecard(props: slidecardProps) {
                         {" "}
                         {props.title}
                     </CardTitle>
-                    <CardTitle className="mb-12 opacity-80">
+                    <CardTitle className="mb-12 opacity-80 leading-8">
                         {" "}
                         {props.description}
                     </CardTitle>

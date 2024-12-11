@@ -36,22 +36,22 @@ export function CarouselWithContent() {
         >
             <Slidecard
                 textCenter={true}
-                title={"MUNDO DA LEITURA - Canal Futura"}
+                title={"MUNDO DA LEITURA -Reading World"}
                 description={
-                    "Programa Infantil Mundo da Leitura na TV produzido pela UPFTV e Canal Futura. Premiado projeto que tive a honra de fazer parte por 10 anos."
+                    "Children's program Mundo da Leitura on TV produced by UPFTV and Canal Futura. Award-winning project that I had the honor of being part of for 10 years."
                 }
                 image={`mundo-da-leitura.png`}
             >
                 <CustomDialog
-                    title="Video Editing"
+                    title="Video Editing and Motion"
                     buttonTitle={"explore"}
-                    content="Examples of some of my videos"
+                    content="Programa Mundo da Leitura - Reading World"
                 >
                     <div className="prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto ">
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
                             <CardHeader className="cards-portfolio-header p-3 sm:p-6">
                                 <CardTitle className="portfolio-card-title text-lg">
-                                    Programa Mundo da Leitura / UPFTV - Canal Futura
+                                    Dramaturgy
                                 </CardTitle>
                                 <CardDescription className="portfolio-card-description text-sm  p-3"></CardDescription>
                             </CardHeader>
@@ -66,14 +66,13 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Covil dos Mandriões / UPFTV-Canal Futura
+                                Covil dos Mandriões
                             </CardFooter>
                         </Card>
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
                             <CardHeader className="cards-portfolio-header p-3 sm:p-6">
                                 <CardTitle className="portfolio-card-title text-lg">
-                                    Programa Mundo da Leitura / UPFTV - Canal
-                                    Futura
+                                    Episode
                                 </CardTitle>
                                 <CardDescription className="portfolio-card-description text-sm  p-3"></CardDescription>
                             </CardHeader>
@@ -88,36 +87,15 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Episódio 01 - UPFTV-Canal Futura
-                            </CardFooter>
-                        </Card>
-                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
-                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
-                                <CardTitle className="portfolio-card-title text-lg">
-                                    Programa Mundo da Leitura / UPFTV - Canal
-                                    Futura
-                                </CardTitle>
-                                <CardDescription className="portfolio-card-description text-sm  p-3"></CardDescription>
-                            </CardHeader>
-                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
-                                <iframe
-                                    className="iframe-video m-auto"
-                                    src="https://www.youtube.com/embed/i5bmV70blKU"
-                                    title="Dramaturgia"
-                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy="strict-origin-when-cross-origin"
-                                    allowFullScreen
-                                ></iframe>
-                            </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Dramaturgia
+                            Christmas Special Episode - UPFTV-Canal Futura
                             </CardFooter>
                         </Card>
 
                         <Card className="cards-portfolio m-auto w-full">
                             <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
                                 <CardTitle className="portfolio-card-title text-lg">
-                                    Contação de História
+                                Storytelling - Contação de História
+                                    
                                 </CardTitle>
                                 <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                             </CardHeader>
@@ -133,15 +111,16 @@ export function CarouselWithContent() {
                                 ></iframe>
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                História do Homem do Cairo - Quadro do programa
-                                no qual eram produzidas diversas histórias em
-                                diversos formatos.
+                                The Man from Cairo - a story from the program in which several stories were produced in various formats.
+
+
+
                             </CardFooter>
                         </Card>
                         <Card className="cards-portfolio m-auto w-full">
                             <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
                                 <CardTitle className="portfolio-card-title text-lg">
-                                    Programa Mundo da Leitura na TV
+                                    Workshop 
                                 </CardTitle>
                                 <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                             </CardHeader>
@@ -165,7 +144,7 @@ export function CarouselWithContent() {
             <Slidecard
                 textCenter={true}
                 title={"Video Editing"}
-                description={"Portfolio com alguns dos meus trabalhos"}
+                description={"Portfolio with some of my videos."}
                 image={`https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80`}
             >
                 <CustomDialog
@@ -194,6 +173,28 @@ export function CarouselWithContent() {
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
                                 Demo Reel{" "}
                                 <small>Rock&apos; Roll - Led Zeppelin</small>
+                            </CardFooter>
+                        </Card>
+                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
+                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
+                                <CardTitle className="portfolio-card-title text-lg">
+                                    Video Editing and Motion
+                                </CardTitle>
+                                <CardDescription className="portfolio-card-description text-sm  p-3"></CardDescription>
+                            </CardHeader>
+                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
+                                <iframe
+                                    className="iframe-video"
+                                    src="https://www.youtube.com/embed/_NQjDoY1Xnk"
+                                    title="CLIP UPFTV INSTITUCIONAL 2017"
+                                    frameBorder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </CardContent>
+                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
+                                Institucional UPFTV
                             </CardFooter>
                         </Card>
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
@@ -332,28 +333,6 @@ export function CarouselWithContent() {
                             </CardFooter>
                         </Card>
 
-                        <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
-                            <CardHeader className="cards-portfolio-header p-3 sm:p-6">
-                                <CardTitle className="portfolio-card-title text-lg">
-                                    Video Editing and Motion
-                                </CardTitle>
-                                <CardDescription className="portfolio-card-description text-sm  p-3"></CardDescription>
-                            </CardHeader>
-                            <CardContent className="card-content prose dark:prose-invert flex m-auto w-full max-w-full  p-3 sm:p-6">
-                                <iframe
-                                    className="iframe-video"
-                                    src="https://www.youtube.com/embed/_NQjDoY1Xnk"
-                                    title="CLIP UPFTV INSTITUCIONAL 2017"
-                                    frameBorder="0"
-                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy="strict-origin-when-cross-origin"
-                                    allowFullScreen
-                                ></iframe>
-                            </CardContent>
-                            <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
-                                Institucional UPFTV
-                            </CardFooter>
-                        </Card>
 
                         <Card className="cards-portfolio m-auto w-full">
                             <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
@@ -497,7 +476,7 @@ export function CarouselWithContent() {
             <Slidecard1
                 title={"Music and Hobbies"}
                 description={
-                    "Música, artes, esportes e hobbies. Aqui você encontra um pouco de tudo."
+                    "Music, hobbies and other things that I like to do."
                 }
                 image={""}
             >
