@@ -613,7 +613,7 @@ export function CarouselWithContent() {
                             <CardFooter className="portfolio-card-footer text-sm  p-3 sm:p-6">
                                 Fun and Shit - Switchblades <br></br>
                                 Gravamos algumas musicas, fizemos algumas
-                                aoresentações e nos divertimos muito.
+                                apresentações e nos divertimos muito.
                             </CardFooter>
                         </Card>
                         
