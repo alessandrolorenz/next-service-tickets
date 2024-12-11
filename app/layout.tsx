@@ -9,8 +9,8 @@ import options from "@/app/api/auth/[...nextauth]/options"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-    title: "Ticket Application",
-    description: "My todo list",
+    title: "Alessandro Lorenz",
+    description: "Portfolio front-end developer",
 }
 
 export default async function RootLayout({

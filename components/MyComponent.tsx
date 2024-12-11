@@ -51,8 +51,7 @@ export function CarouselWithContent() {
                         <Card className="cards-portfolio m-auto col-span-1 sm:col-span-2  w-full ">
                             <CardHeader className="cards-portfolio-header p-3 sm:p-6">
                                 <CardTitle className="portfolio-card-title text-lg">
-                                    Programa Mundo da Leitura / UPFTV - Canal
-                                    Futura
+                                    Programa Mundo da Leitura / UPFTV - Canal Futura
                                 </CardTitle>
                                 <CardDescription className="portfolio-card-description text-sm  p-3"></CardDescription>
                             </CardHeader>
@@ -142,7 +141,7 @@ export function CarouselWithContent() {
                         <Card className="cards-portfolio m-auto w-full">
                             <CardHeader className="cards-portfolio-header  p-3 sm:p-6">
                                 <CardTitle className="portfolio-card-title text-lg">
-                                    Programa Mundo da Leituta na TV
+                                    Programa Mundo da Leitura na TV
                                 </CardTitle>
                                 <CardDescription className="portfolio-card-description text-sm"></CardDescription>
                             </CardHeader>
@@ -640,7 +639,7 @@ export function CarouselWithContent() {
                             </CardContent>
                             <CardFooter className="portfolio-card-footer text-sm p-3 sm:p-6">
                                 Poder, sexo e violênia - Musica granhadora da
-                                eliminatória de Passo Fundo do Circuito de cock
+                                eliminatória de Passo Fundo do Circuito de Rock
                                 de 1996. Eu tinha 15 anos aninhos.
                             </CardFooter>
                         </Card>
