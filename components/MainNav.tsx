@@ -17,11 +17,11 @@ const MainNav = ({ session }: { session: any }) => {
     }
     return (
         <div className="flex justify-between">
-            {!isHomeOrRoot && (
+          
                 <MainNavLinks
                     role={session?.user.role}
                 />
-            )}
+         
 
             <div className="flex items-center gap-2">
                 {!isHomeOrRoot && (

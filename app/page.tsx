@@ -33,13 +33,6 @@ const Home = () => {
                             Developer
                         </CardDescription>
                     </CardHeader>
-                    <CardContent className="max-w-full prose dark:prose-invert">
-                        I am a Front End Developer with a background in motion
-                        graphics and video editing. The background in motion graphics and video
-                        editing has enhanced my understanding of visual elements
-                        and user experience in my current role as a Front End
-                        Developer.
-                    </CardContent>
                 </Card>
 
                 <div className="relative">
@@ -54,15 +47,9 @@ const Home = () => {
                             isLastChild={false}
                         >
                             <Card className="mx-0 lg:col-span-3 lg:mr-0 relative p-6">
+        
                                 <CardContent className="max-w-full prose dark:prose-invert  p-0 pt-2">
-                                    This website showcases my portfolio of
-                                    videos created using Adobe AfterEffects,
-                                    Illustrator, PhotoShop, and Premiere, and
-                                    some projects developed as a Front End
-                                    Developer.
-                                </CardContent>
-                                <CardContent className="max-w-full prose dark:prose-invert  p-0 pt-2">
-                                    I used a stack comprising Typescript,
+                                    For this website I used a stack comprising Typescript,
                                     ReactJs, NextJs, CSS modules, Tailwind,
                                     Prisma, and CI/CD with Vercel. The homepage,
                                     designed with CSS modules, employs a best
@@ -88,36 +75,11 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 mb-8">
+                {/* <div className="mt-8 mb-8">
                     <CarouselTransition />
-                </div>
+                </div> */}
 
-                <AccordionBasicExample>
-                    <AccordionItem
-                        id="8"
-                        title="Dev Projects"
-                        activeElement={"true"}
-                        handleClick={function (id: string): void {}}
-                        isFirstChild={false}
-                        isLastChild={true}
-                    >
-                        <div className="relative">
-                            <Card className="mx-0 mb-4 lg:col-span-3 lg:mr-0 relative ">
-                                <CardContent className="max-w-full prose dark:prose-invert mt-4">
-                                    I have professional hands-on experience in
-                                    Front End Development, utilizing
-                                    technologies such as HTML/CSS, JavaScript,
-                                    React, NextJs, Vue, SCSS, Webpack, Node, and
-                                    MongoDB. I started my developer career as a
-                                    Back End Developer but shifted to the Front
-                                    End due to my motion graphics background.
-                                    <br></br>I enjoy being at the forefront of
-                                    innovation and I am fascinated by new
-                                    technologies and the endless possibilities
-                                    they offer to make the world a better place.
-                                </CardContent>
-                            </Card>
-
+<div className="relative">
                             <div className="relative prose dark:prose-invert w-full max-w-full grid grid-cols-1 sm:grid-cols-2  gap-4 m-auto ">
                                 <Card className="cards-portfolio techs m-auto w-full">
                                     <CardHeader className="cards-portfolio-header">
@@ -187,7 +149,7 @@ const Home = () => {
                                     <CardFooter>
                                         <code
                                             style={{
-                                                background: "midnightblue",
+                                                background: "blueviolet",
                                                 padding: "10px",
                                             }}
                                         >
@@ -199,7 +161,7 @@ const Home = () => {
                                     <CardFooter>
                                         <code
                                             style={{
-                                                background: "midnightblue",
+                                                background: "blueviolet",
                                                 padding: "10px",
                                             }}
                                         >
@@ -247,8 +209,7 @@ const Home = () => {
                                 <div></div>
                             </div>
                         </div>
-                    </AccordionItem>
-                </AccordionBasicExample>
+          
                 {/* <code
                     style={{
                         background: "midnightblue",
