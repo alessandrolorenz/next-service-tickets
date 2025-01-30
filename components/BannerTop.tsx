@@ -48,8 +48,7 @@ const BannerTop = (): JSX.Element => {
             >
                 <div className={styles.caption}>
                     <CardTitle className="uppercase">
-                        FRONT END - HTML/CSS JAVASCRIPT - Video Editing and
-                        Motion Graphics
+                        FRONT END DEVELOPER
                     </CardTitle>
                     <h2>
                         <em>ALESSANDRO</em> LORENZ
