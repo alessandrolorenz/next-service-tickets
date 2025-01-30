@@ -84,43 +84,6 @@ export function Techs() {
                     <img src="tech-logos/figma.svg" alt="html" />
                 </div>
             </div>
-            <div
-                className={`${styles.cards} mb-8 mt-4 ${
-                    styles[themeState === "light" ? "light" : "dark"]
-                } ${styles["video-logos"]}`}
-            >
-                <div className={`${styles["box-tech"]} `} key="video-0">
-                    <p>Premiere</p>
-                    <img src="video-logos/premiere.png" alt="html" />
-                </div>
-                <div className={`${styles["box-tech"]} `} key="video-1">
-                    <p>AfterEffects</p>
-                    <img src="video-logos/aftereffects.png" alt="html" />
-                </div>
-                <div className={`${styles["box-tech"]} `} key="video-2">
-                    <p>Illustrator</p>
-                    <img src="video-logos/illustrator.png" alt="html" />
-                </div>
-                <div className={`${styles["box-tech"]} `} key="video-3">
-                    <p>PhotoShop</p>
-                    <img src="video-logos/aftereffects.png" alt="html" />
-                </div>
-
-                <div className={`${styles["box-tech"]} `} key="video-4">
-                    <p>FinalCut</p>
-                    <img src="video-logos/finalcut.png" alt="html" />
-                </div>
-
-                <div className={`${styles["box-tech"]} `} key="video-5">
-                    <p>DaVinci Resolve</p>
-                    <img src="video-logos/davinci.png" alt="html" />
-                </div>
-
-                <div className={`${styles["box-tech"]} `} key="video-6">
-                    <p>Blender</p>
-                    <img src="video-logos/blender.png" alt="html" />
-                </div>
-            </div>
         </>
     )
 }
