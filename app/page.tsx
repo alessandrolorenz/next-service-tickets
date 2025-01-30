@@ -98,9 +98,7 @@ const Home = () => {
                                         tickets or tasks related to ongoing
                                         project activities. A user can create,
                                         edit, delete, and mark as completed a
-                                        ticket. It serves as my comprehensive
-                                        to-do list, guiding the evolution of the
-                                        system.
+                                        ticket.
                                     </CardFooter>
 
                                     <Link
