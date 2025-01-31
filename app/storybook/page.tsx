@@ -53,7 +53,7 @@ const Storybook = () => {
                     layout direction, margins, paddings, and much more.
                     <br></br> <br></br>
                     The Chat component is an AI-powered chatbot built with
-                    Node.js and Express, integrated with Cohere's API for
+                    Node.js and Express, integrated with Cohere&apos;s API for
                     intelligent responses. Designed for seamless interaction, it
                     supports real-time conversations and can be deployed on
                     Vercel for global accessibility. The chatbot ensures smooth
