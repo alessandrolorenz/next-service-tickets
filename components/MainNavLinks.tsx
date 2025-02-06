@@ -12,6 +12,7 @@ const MainNavLinks = ({
 }: MainNavLinksProps) => {
 
     const links = [
+        { label: "Back to Resume", href: "https://alessandrolorenz.vercel.app", adminOnly: false },
         { label: "Home", href: "/", adminOnly: false },
         { label: "Tickets App", href: "/ticket-app", adminOnly: false },
         { label: "Dashboard", href: "/dashboard", adminOnly: false },
